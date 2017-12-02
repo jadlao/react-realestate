@@ -1,6 +1,9 @@
 #filter {
   background: $grey;
   width: 30%;
+  max-width: 300px;
+  display: inline-block;
+  float: left;
 
   .inside {
     max-width: 300px;
@@ -57,4 +60,56 @@
   }
 }
 
-#listings {}
+#listings {
+  width: 70%;
+  float: left;
+  display: inline-block;
+  padding: 15px;
+  background: $offwhite;
+
+  .search-area {
+    input[type="text"] {
+      width: 70%;
+      background: transparent;
+      font-size: 2rem;
+      border: none;
+      border-bottom: 2px solid $lightgrey;
+      margin-bottom: 20px;
+      color: $lightgrey;
+    }
+  }
+
+  .sortby-area {
+    margin-bottom: 20px;
+
+    .results {
+      font-size: 0.8rem;
+      color: $lightgrey;
+      display: inline-block;
+    }
+
+    .sort-options {
+      float: right;
+
+      select {
+        font-size: 0.9rem;
+        font-weight: 300;
+        border: 1px solid $lightgrey;
+        background: transparent;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+
+      .view {
+        display: inline-block;
+
+        .fa {
+          font-size: 1.5rem;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

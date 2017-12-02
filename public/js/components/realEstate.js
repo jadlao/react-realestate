@@ -385,7 +385,7 @@ var Listings = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { className: "listings" },
+        { id: "listings" },
         _react2.default.createElement(
           "section",
           { className: "search-area" },
@@ -396,7 +396,7 @@ var Listings = function (_Component) {
           { className: "sortby-area" },
           _react2.default.createElement(
             "div",
-            null,
+            { className: "results" },
             "390 results found"
           ),
           _react2.default.createElement(
@@ -427,9 +427,121 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           "section",
           { className: "listings-results" },
-          _react2.default.createElement("div", { className: "list-item" })
+          _react2.default.createElement(
+            "div",
+            { className: "listing" },
+            _react2.default.createElement(
+              "div",
+              { className: "listing-img" },
+              _react2.default.createElement(
+                "span",
+                { className: "address" },
+                "Address"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details" },
+                _react2.default.createElement("div", { className: "user-img" }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "user-details" },
+                  _react2.default.createElement(
+                    "span",
+                    { className: "user-name" },
+                    "Nina Smith"
+                  ),
+                  _react2.default.createElement(
+                    "span",
+                    { className: "post-date" },
+                    "05/11/2017"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "listing-details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "floor-space" },
+                    _react2.default.createElement("i", { className: "fa fa-square-o", "aria-hidden": "true" })
+                  ),
+                  _react2.default.createElement(
+                    "span",
+                    null,
+                    "1000 m\xB2"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "bedrooms" },
+                  _react2.default.createElement("i", { className: "fa fa-bed", "aria-hidden": "true" }),
+                  _react2.default.createElement(
+                    "span",
+                    null,
+                    "3 bedrooms"
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "bottom-info" },
+              _react2.default.createElement(
+                "span",
+                null,
+                "$2000 / month"
+              ),
+              _react2.default.createElement(
+                "span",
+                null,
+                _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
+                "Sydney, NSW"
+              )
+            )
+          )
         ),
-        _react2.default.createElement("section", { className: "pagination" })
+        _react2.default.createElement(
+          "section",
+          { className: "pagination" },
+          _react2.default.createElement(
+            "ul",
+            { className: "pagination-nums" },
+            _react2.default.createElement(
+              "li",
+              null,
+              "Prev"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "1"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "2"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "3"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "4"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "5"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "Next"
+            )
+          )
+        )
       );
     }
   }]);
