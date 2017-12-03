@@ -1,6 +1,111 @@
 webpackJsonp([0],{
 
-/***/ 101:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
+}, {
+  address: '20-34 Pierce St',
+  city: 'Melbourne',
+  state: 'VIC',
+  rooms: 2,
+  price: 300000,
+  floorspace: 400,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://cdn.freshome.com/wp-content/uploads/2014/09/architecture-modern-house.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'https://i.pinimg.com/736x/4b/fc/f5/4bfcf5553f7a9540091286d547ae64f0--house-exterior-design-house-exteriors.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'https://cdn.home-designing.com/wp-content/uploads/2017/05/forest-setting-lit-modern-two-storey-house-elevation.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://nbgledlighting.com/wp-content/uploads/2016/10/modern-house-design-spectacular-view-our-new-modern-house-designs-and-plans-porter-davis.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
+}, {
+  address: '20-34 Grand St',
+  city: 'Sydney',
+  state: 'NSW',
+  rooms: 3,
+  price: 400000,
+  floorspace: 500,
+  extras: ['elevator', 'gym'],
+  homeType: 'House',
+  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28,6 +133,10 @@ var _Listings = __webpack_require__(99);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _listingsData = __webpack_require__(100);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42,12 +151,18 @@ var App = function (_Component) {
   function App() {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.state = {
+      listingsData: _listingsData2.default
+    };
+    return _this;
   }
 
   _createClass(App, [{
     key: 'render',
     value: function render() {
+      // console.log(this.state.listingsData);
       return _react2.default.createElement(
         'div',
         null,
@@ -56,7 +171,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, null),
-          _react2.default.createElement(_Listings2.default, null)
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
     }
@@ -377,10 +492,118 @@ var Listings = function (_Component) {
   function Listings() {
     _classCallCheck(this, Listings);
 
-    return _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
+
+    _this.state = {};
+    _this.loopListings = _this.loopListings.bind(_this);
+    return _this;
   }
 
   _createClass(Listings, [{
+    key: "loopListings",
+    value: function loopListings() {
+      var listingsData = this.props.listingsData;
+
+
+      return listingsData.map(function (listing, index) {
+        return _react2.default.createElement(
+          "div",
+          { className: "col-md-3", key: index },
+          _react2.default.createElement(
+            "div",
+            { className: "listing" },
+            _react2.default.createElement(
+              "div",
+              { className: "listing-img", style: {
+                  background: "url(\"" + listing.image + "\") no-repeat center center"
+                } },
+              _react2.default.createElement(
+                "span",
+                { className: "address" },
+                listing.address
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-3" },
+                  _react2.default.createElement("div", { className: "user-img" })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-9" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "user-details" },
+                    _react2.default.createElement(
+                      "span",
+                      { className: "user-name" },
+                      "Nina Smith"
+                    ),
+                    _react2.default.createElement(
+                      "span",
+                      { className: "post-date" },
+                      "05/11/2017"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "listing-details" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "floor-space" },
+                      _react2.default.createElement("i", { className: "fa fa-square-o", "aria-hidden": "true" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        listing.floorspace,
+                        "m\xB2"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "bedrooms" },
+                      _react2.default.createElement("i", { className: "fa fa-bed", "aria-hidden": "true" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        listing.rooms,
+                        "bedrooms"
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "view-btn" },
+                    "View Listing"
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "bottom-info" },
+              _react2.default.createElement(
+                "span",
+                { className: "price" },
+                "$",
+                listing.price
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "location" },
+                _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
+                listing.city,
+                ", ",
+                listing.state
+              )
+            )
+          )
+        );
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -427,97 +650,14 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           "section",
           { className: "listings-results" },
-          _react2.default.createElement(
-            "div",
-            { className: "listing" },
-            _react2.default.createElement(
-              "div",
-              { className: "listing-img" },
-              _react2.default.createElement(
-                "span",
-                { className: "address" },
-                "23 Dexi Hills"
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "details" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "col-md-3" },
-                  _react2.default.createElement("div", { className: "user-img" })
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "col-md-9" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "user-details" },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "user-name" },
-                      "Nina Smith"
-                    ),
-                    _react2.default.createElement(
-                      "span",
-                      { className: "post-date" },
-                      "05/11/2017"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "listing-details" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "floor-space" },
-                      _react2.default.createElement("i", { className: "fa fa-square-o", "aria-hidden": "true" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "1000 m\xB2"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "bedrooms" },
-                      _react2.default.createElement("i", { className: "fa fa-bed", "aria-hidden": "true" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "3 bedrooms"
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "view-btn" },
-                    "View Listing"
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "bottom-info" },
-              _react2.default.createElement(
-                "span",
-                null,
-                "$2000 / month"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
-                "Sydney, NSW"
-              )
-            )
-          )
+          this.loopListings()
         ),
         _react2.default.createElement(
           "section",
-          { className: "pagination" },
+          { id: "pagination" },
           _react2.default.createElement(
             "ul",
-            { className: "pagination-nums" },
+            { className: "pages" },
             _react2.default.createElement(
               "li",
               null,
@@ -525,7 +665,7 @@ var Listings = function (_Component) {
             ),
             _react2.default.createElement(
               "li",
-              null,
+              { className: "active" },
               "1"
             ),
             _react2.default.createElement(
@@ -566,4 +706,4 @@ exports.default = Listings;
 
 /***/ })
 
-},[101]);
+},[102]);
