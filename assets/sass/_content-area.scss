@@ -126,16 +126,17 @@
     .listing {
       background: #fff;
       border-radius: 5px;
-      -webkit-box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
-      -moz-box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
-      box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
+      -webkit-box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
+      -moz-box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
+      box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
     }
 
     .listing-img {
       color: #fff;
       padding: 15px;
       position: relative;
-      background: url("https://www.e-architect.co.uk/images/jpgs/thailand/mandalay-beach-villas-m190813-1.jpg") no-repeat center center;
+      background: url("https://www.e-architect.co.uk/images/jpgs/thailand/mandalay-beach-villas-m190813-1.jpg")
+        no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -184,13 +185,31 @@
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7b1e9a+0,9e2ad8+50,9420ca+51,c37ee8+100 */
-        background: rgba(123,30,154, .8);
+        background: rgba(123, 30, 154, 0.8);
         /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(123,30,154,.8) 0%, rgba(158,42,216,.8) 50%, rgba(148,32,202,.8) 51%, rgba(195,126,232,.8) 100%);
+        background: -moz-linear-gradient(
+          -45deg,
+          rgba(123, 30, 154, 0.8) 0%,
+          rgba(158, 42, 216, 0.8) 50%,
+          rgba(148, 32, 202, 0.8) 51%,
+          rgba(195, 126, 232, 0.8) 100%
+        );
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(123,30,154,.8) 0%,rgba(158,42,216,.8) 50%,rgba(148,32,202,.8) 51%,rgba(195,126,232,.8) 100%);
+        background: -webkit-linear-gradient(
+          -45deg,
+          rgba(123, 30, 154, 0.8) 0%,
+          rgba(158, 42, 216, 0.8) 50%,
+          rgba(148, 32, 202, 0.8) 51%,
+          rgba(195, 126, 232, 0.8) 100%
+        );
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(123,30,154,.8) 0%,rgba(158,42,216,.8) 50%,rgba(148,32,202,.8) 51%,rgba(195,126,232,.8) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(123, 30, 154, 0.8) 0%,
+          rgba(158, 42, 216, 0.8) 50%,
+          rgba(148, 32, 202, 0.8) 51%,
+          rgba(195, 126, 232, 0.8) 100%
+        );
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         .user-img {
           width: 35px;
@@ -198,7 +217,8 @@
           border-radius: 50%;
           border: 2px solid #fff;
           display: inline-block;
-          background: url("http://cdn.reim.mobimages.realestateinmotion.com.au/5000_profile_Screen-Shot-2014-02-13-at-10.21.57-am.png") no-repeat center center;
+          background: url("http://cdn.reim.mobimages.realestateinmotion.com.au/5000_profile_Screen-Shot-2014-02-13-at-10.21.57-am.png")
+            no-repeat center center;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
@@ -291,9 +311,9 @@
 
   .pages {
     background: #fff;
-    -webkit-box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
-    -moz-box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
-    box-shadow: 0 9px 55px -5px rgba(224,224,224,1);
+    -webkit-box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
+    -moz-box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
+    box-shadow: 0 9px 55px -5px rgba(224, 224, 224, 1);
 
     li {
       display: inline-block;
