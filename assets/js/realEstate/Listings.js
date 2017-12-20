@@ -10,6 +10,10 @@ export default class Listings extends Component {
   loopListings() {
     let { listingsData } = this.props;
 
+    if (listingsData == undefined || listingsData.length == 0) {
+      return "Sorry your filter did not match any listing."
+    }
+
     return listingsData.map((listing, index) => {
       return (
         <div className="col-md-3" key={index}>
@@ -38,11 +42,11 @@ export default class Listings extends Component {
                         m&#178;
                       </span>
                     </div>
-                    <div className="bedrooms">
+                    <div className="rooms">
                       <i className="fa fa-bed" aria-hidden="true" />
                       <span>
                         {listing.rooms}
-                        bedrooms
+                        rooms
                       </span>
                     </div>
                   </div>
