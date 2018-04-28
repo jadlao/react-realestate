@@ -1,16 +1,16 @@
-$darkpurple: #0c002b;
-$pink: #fe6b91;
-$grey: #faf7f5;
-$offwhite: #fffeff;
-$darkgrey: #828d9d;
-$lightgrey: #dadde2;
-$grid-columns: 12;
-$grid-max-width: 1200px;
 // Grid System
 $grid-columns: 12;
 $grid-max-width: 1200px; //breakpoint-small
-$breakpoint-xs: "only screen and (min-width: 0px)";
-$breakpoint-small: "only screen and (min-width: 451px)";
-$breakpoint-medium: "only screen and (min-width: 768px)";
-$breakpoint-large: "only screen and (min-width: 1008px)";
-$breakpoint-xl: "only screen and (min-width: 1300px)";
+$breakpoint-xs: 'only screen and (min-width: 0px)';
+$breakpoint-small: 'only screen and (min-width: 451px)';
+$breakpoint-medium: 'only screen and (min-width: 768px)';
+$breakpoint-large: 'only screen and (min-width: 1008px)';
+$breakpoint-xl: 'only screen and (min-width: 1300px)';
+// Colors
+$white: #fff;
+$darkgrey: #4f5759;
+$darkergrey: #4b5557;
+$offwhite: #f3f3f3;
+$blue: #0bafda;
+$btngrey: #eee;
+$purple: #222236;

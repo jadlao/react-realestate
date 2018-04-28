@@ -1,111 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 100:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var listingsData = [{
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 3,
-  price: 400000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
-}, {
-  address: '20-34 Pierce St',
-  city: 'Melbourne',
-  state: 'VIC',
-  rooms: 2,
-  price: 320000,
-  floorspace: 400,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'http://cdn.freshome.com/wp-content/uploads/2014/09/architecture-modern-house.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Brisbane',
-  state: 'NSW',
-  rooms: 3,
-  price: 370000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'https://i.pinimg.com/736x/4b/fc/f5/4bfcf5553f7a9540091286d547ae64f0--house-exterior-design-house-exteriors.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 3,
-  price: 1000000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'https://cdn.home-designing.com/wp-content/uploads/2017/05/forest-setting-lit-modern-two-storey-house-elevation.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 3,
-  price: 900000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'http://nbgledlighting.com/wp-content/uploads/2016/10/modern-house-design-spectacular-view-our-new-modern-house-designs-and-plans-porter-davis.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Perth',
-  state: 'NSW',
-  rooms: 3,
-  price: 150000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 3,
-  price: 700000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'House',
-  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 1,
-  price: 500000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'Apartment',
-  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
-}, {
-  address: '20-34 Grand St',
-  city: 'Sydney',
-  state: 'NSW',
-  rooms: 0,
-  price: 210000,
-  floorspace: 500,
-  extras: ['elevator', 'gym'],
-  homeType: 'Studio',
-  image: 'http://homecrack.com/wp-content/uploads/2016/09/modern-house-design-2016-on-1920x1080-ultra-modern-house-designs-india-credit-ultra-modern-house-designs.jpg'
-}];
-
-exports.default = listingsData;
-
-/***/ }),
-
-/***/ 102:
+/***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -113,7 +8,7 @@ exports.default = listingsData;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -121,19 +16,15 @@ var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Header = __webpack_require__(98);
-
-var _Header2 = _interopRequireDefault(_Header);
-
 var _Filter = __webpack_require__(97);
 
 var _Filter2 = _interopRequireDefault(_Filter);
 
-var _Listings = __webpack_require__(99);
+var _Listings = __webpack_require__(98);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _listingsData = __webpack_require__(100);
+var _listingsData = __webpack_require__(99);
 
 var _listingsData2 = _interopRequireDefault(_listingsData);
 
@@ -159,27 +50,33 @@ var App = function (_Component) {
 
     _this.state = {
       listingsData: _listingsData2.default,
+      view: 'gallery',
+      buy: '',
+      rent: '',
+      agency: '',
+      owner: '',
       city: 'All',
       homeType: 'All',
-      rooms: '0',
+      bedrooms: '0',
       min_price: 0,
-      max_price: 10000000,
-      min_floor_space: 0,
-      max_floor_space: 50000,
-      elevator: false,
-      swimming_pool: false,
-      finished_basement: false,
+      max_price: 2000000,
+      min_space: 0,
+      max_space: 500,
+      elevators: false,
+      pool: false,
       gym: false,
+      balcony: false,
       filteredData: _listingsData2.default,
-      populateFormsData: '',
+      populateData: '',
       sortby: 'price-dsc',
-      view: 'long',
       search: ''
     };
-    _this.change = _this.change.bind(_this);
-    _this.filteredData = _this.filteredData.bind(_this);
-    _this.populateForms = _this.populateForms.bind(_this);
     _this.changeView = _this.changeView.bind(_this);
+    _this.filterData = _this.filterData.bind(_this);
+    _this.change = _this.change.bind(_this);
+    _this.buyClick = _this.buyClick.bind(_this);
+    _this.ownerClick = _this.ownerClick.bind(_this);
+    _this.populateForms = _this.populateForms.bind(_this);
     return _this;
   }
 
@@ -187,71 +84,179 @@ var App = function (_Component) {
     key: 'componentWillMount',
     value: function componentWillMount() {
       var listingsData = this.state.listingsData.sort(function (a, b) {
-        // sort from lowest price to highest price
         return a.price - b.price;
       });
+    }
 
+    // change view to list or gallery style
+
+  }, {
+    key: 'changeView',
+    value: function changeView(nameView) {
       this.setState({
-        listingsData: listingsData
+        view: nameView
       });
     }
   }, {
     key: 'change',
-    value: function change(event) {
+    value: function change(e) {
       var _this2 = this;
 
-      var name = event.target.name;
-      var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+      var name = e.target.name;
+      var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
       this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this2.state);
-        _this2.filteredData();
-      });
-      //console.log(event.target.value);
-    }
-  }, {
-    key: 'changeView',
-    value: function changeView(viewName) {
-      this.setState({
-        view: viewName
+        //console.log(this.state);
+        // call filter data method
+        _this2.filterData();
       });
     }
   }, {
-    key: 'filteredData',
-    value: function filteredData() {
+    key: 'buyClick',
+    value: function buyClick(e) {
       var _this3 = this;
 
+      var name = e.target.id;
+      var value = e.target.id;
+
+      if (this.state.buy == 'buy' || this.state.rent == 'rent') {
+        this.setState({
+          buy: '',
+          rent: ''
+        }, function () {
+          _this3.filterData();
+        });
+      } else {
+        this.setState(_defineProperty({}, name, value), function () {
+          //console.log([name], value);
+          _this3.filterData();
+        });
+      }
+    }
+  }, {
+    key: 'ownerClick',
+    value: function ownerClick(e) {
+      var _this4 = this;
+
+      var name = e.target.id;
+      var value = e.target.id;
+
+      if (this.state.agency == 'agency' || this.state.owner == 'owner') {
+        this.setState({
+          agency: '',
+          owner: ''
+        }, function () {
+          _this4.filterData();
+        });
+      } else {
+        this.setState(_defineProperty({}, name, value), function () {
+          //console.log([name], value);
+          _this4.filterData();
+        });
+      }
+    }
+
+    // filtered data
+
+  }, {
+    key: 'filterData',
+    value: function filterData() {
+      var _this5 = this;
+
+      // price, space, bedrooms filter
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space && item.rooms >= _this3.state.rooms;
+        return item.price >= _this5.state.min_price && item.price <= _this5.state.max_price && item.space >= _this5.state.min_space && item.space <= _this5.state.max_space && item.bedrooms >= _this5.state.bedrooms;
       });
 
+      // buy filter
+      if (this.state.buy == 'buy') {
+        newData = newData.filter(function (item) {
+          return item.buyrent == 'buy';
+        });
+      }
+
+      // rent filter
+      if (this.state.rent == 'rent') {
+        newData = newData.filter(function (item) {
+          return item.buyrent == 'rent';
+        });
+      }
+
+      // agency filter
+      if (this.state.agency == 'agency') {
+        newData = newData.filter(function (item) {
+          return item.agencyowner == 'agency';
+        });
+      }
+
+      // owner filter
+      if (this.state.owner == 'owner') {
+        newData = newData.filter(function (item) {
+          return item.agencyowner == 'owner';
+        });
+      }
+
+      // city filter
       if (this.state.city != 'All') {
         newData = newData.filter(function (item) {
-          return item.city == _this3.state.city;
+          return item.city == _this5.state.city;
         });
       }
+
+      // home type filter
       if (this.state.homeType != 'All') {
         newData = newData.filter(function (item) {
-          return item.homeType == _this3.state.homeType;
+          return item.homeType == _this5.state.homeType;
         });
       }
-      // sort by lowest price
-      if (this.state.sortby == 'price-dsc') {
-        newData = newData.sort(function (a, b) {
-          return a.price - b.price;
+
+      // filter elevators
+      if (this.state.elevators == true) {
+        newData = newData.filter(function (item) {
+          return item.elevators == true;
         });
       }
+
+      // filter pool
+      if (this.state.pool == true) {
+        newData = newData.filter(function (item) {
+          return item.pool == true;
+        });
+      }
+
+      // filter gym
+      if (this.state.gym == true) {
+        newData = newData.filter(function (item) {
+          return item.gym == true;
+        });
+      }
+
+      // filter balcony
+      if (this.state.balcony == true) {
+        newData = newData.filter(function (item) {
+          return item.balcony == true;
+        });
+      }
+
       // sort by highest price
       if (this.state.sortby == 'price-asc') {
         newData = newData.sort(function (a, b) {
           return b.price - a.price;
         });
       }
+
+      // sort by lowest price
+      if (this.state.sortby == 'price-dsc') {
+        newData = newData.sort(function (a, b) {
+          return a.price - b.price;
+        });
+      }
+
       // search by cities
       if (this.state.search != '') {
         newData = newData.filter(function (item) {
           var city = item.city.toLowerCase();
-          var searchText = _this3.state.search.toLowerCase();
+          var searchText = _this5.state.search.toLowerCase();
           var n = city.match(searchText);
 
           if (n != null) {
@@ -262,72 +267,125 @@ var App = function (_Component) {
 
       this.setState({
         filteredData: newData
+      }, function () {
+        console.log(_this5.state);
       });
     }
+
+    // populate select filter dropdowns
+
   }, {
     key: 'populateForms',
     value: function populateForms() {
-      var _this4 = this;
-
-      // city
+      // cities
       var cities = this.state.listingsData.map(function (item) {
+        //console.log(item.city);
         return item.city;
       });
+
       cities = new Set(cities);
       cities = [].concat(_toConsumableArray(cities));
-      // sort cities from A - Z
       cities = cities.sort();
 
-      // homeType
+      // home types
       var homeTypes = this.state.listingsData.map(function (item) {
         return item.homeType;
       });
+
       homeTypes = new Set(homeTypes);
       homeTypes = [].concat(_toConsumableArray(homeTypes));
-
       homeTypes = homeTypes.sort();
 
       // bedrooms
       var bedrooms = this.state.listingsData.map(function (item) {
-        return item.rooms;
+        return item.bedrooms;
       });
+
       bedrooms = new Set(bedrooms);
       bedrooms = [].concat(_toConsumableArray(bedrooms));
-
       bedrooms = bedrooms.sort();
 
       this.setState({
-        populateFormsData: {
+        populateData: {
           cities: cities,
           homeTypes: homeTypes,
           bedrooms: bedrooms
         }
       }, function () {
-        console.log(_this4.state);
+        //console.log(this.state);
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      // console.log(this.state.listingsData);
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(_Header2.default, null),
+        { className: 'wrapper' },
         _react2.default.createElement(
-          'section',
-          { id: 'content-area' },
-          _react2.default.createElement(_Filter2.default, {
-            change: this.change,
-            globalState: this.state,
-            populateAction: this.populateForms
-          }),
-          _react2.default.createElement(_Listings2.default, {
-            listingsData: this.state.filteredData,
-            change: this.change,
-            globalState: this.state,
-            changeView: this.changeView
-          })
+          'div',
+          { className: 'body-wrapper' },
+          _react2.default.createElement(
+            'header',
+            { className: 'header' },
+            _react2.default.createElement(
+              'div',
+              { className: 'nav-brand' },
+              _react2.default.createElement('img', { src: 'https://image.ibb.co/kZLL6b/imageedit_1_9700106251.png' })
+            ),
+            _react2.default.createElement(
+              'nav',
+              null,
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: '#' },
+                  'About Us'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: '#' },
+                  'Login'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: '#', className: 'btn-register' },
+                  'Register'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'section',
+            { id: 'content-area' },
+            _react2.default.createElement(_Filter2.default, {
+              change: this.change,
+              buyClick: this.buyClick,
+              ownerClick: this.ownerClick,
+              globalState: this.state,
+              populateAction: this.populateForms
+            }),
+            _react2.default.createElement(_Listings2.default, {
+              listingsData: this.state.filteredData,
+              globalState: this.state,
+              change: this.change,
+              changeView: this.changeView
+            })
+          )
+        ),
+        _react2.default.createElement(
+          'footer',
+          null,
+          '2018 Real Estate'
         )
       );
     }
@@ -354,7 +412,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -389,10 +447,10 @@ var Filter = function (_Component) {
   }, {
     key: "cities",
     value: function cities() {
-      if (this.props.globalState.populateFormsData.cities != undefined) {
-        var cities = this.props.globalState.populateFormsData.cities;
+      if (this.props.globalState.populateData.cities != undefined) {
+        var cities = this.props.globalState.populateData.cities;
+        //console.log(cities);
 
-        console.log(cities);
         return cities.map(function (item) {
           return _react2.default.createElement(
             "option",
@@ -405,10 +463,10 @@ var Filter = function (_Component) {
   }, {
     key: "homeTypes",
     value: function homeTypes() {
-      if (this.props.globalState.populateFormsData.homeTypes != undefined) {
-        var homeTypes = this.props.globalState.populateFormsData.homeTypes;
+      if (this.props.globalState.populateData.homeTypes != undefined) {
+        var homeTypes = this.props.globalState.populateData.homeTypes;
 
-        console.log(homeTypes);
+
         return homeTypes.map(function (item) {
           return _react2.default.createElement(
             "option",
@@ -421,10 +479,10 @@ var Filter = function (_Component) {
   }, {
     key: "bedrooms",
     value: function bedrooms() {
-      if (this.props.globalState.populateFormsData.bedrooms != undefined) {
-        var bedrooms = this.props.globalState.populateFormsData.bedrooms;
+      if (this.props.globalState.populateData.bedrooms != undefined) {
+        var bedrooms = this.props.globalState.populateData.bedrooms;
 
-        console.log(bedrooms);
+
         return bedrooms.map(function (item) {
           return _react2.default.createElement(
             "option",
@@ -440,15 +498,59 @@ var Filter = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { id: "filter" },
+        { className: "filters col-xs-4" },
+        _react2.default.createElement(
+          "h5",
+          null,
+          "Options"
+        ),
         _react2.default.createElement(
           "div",
-          { className: "inside" },
+          { className: "buy-rent" },
           _react2.default.createElement(
-            "h4",
-            null,
-            "Filter"
+            "div",
+            {
+              className: "btn " + (this.props.globalState.buy == 'buy' ? 'active' : ''),
+              onClick: this.props.buyClick,
+              id: "buy"
+            },
+            "Buy"
           ),
+          _react2.default.createElement(
+            "div",
+            {
+              className: "btn " + (this.props.globalState.rent == 'rent' ? 'active' : ''),
+              onClick: this.props.buyClick,
+              id: "rent"
+            },
+            "Rent"
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "agency-owner" },
+          _react2.default.createElement(
+            "div",
+            {
+              className: "btn " + (this.props.globalState.agency == 'agency' ? 'active' : ''),
+              onClick: this.props.ownerClick,
+              id: "agency"
+            },
+            "Agency"
+          ),
+          _react2.default.createElement(
+            "div",
+            {
+              className: "btn " + (this.props.globalState.owner == 'owner' ? 'active' : ''),
+              onClick: this.props.ownerClick,
+              id: "owner"
+            },
+            "Owner"
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "cities" },
           _react2.default.createElement(
             "label",
             { htmlFor: "city" },
@@ -456,18 +558,18 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "select",
-            {
-              name: "city",
-              className: "filters city",
-              onChange: this.props.change
-            },
+            { onChange: this.props.change, name: "city" },
             _react2.default.createElement(
               "option",
               { value: "All" },
-              "All"
+              "All cities"
             ),
             this.cities()
-          ),
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "homeTypes" },
           _react2.default.createElement(
             "label",
             { htmlFor: "homeType" },
@@ -475,146 +577,141 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "select",
-            {
-              name: "homeType",
-              className: "filters homeType",
-              onChange: this.props.change
-            },
+            { onChange: this.props.change, name: "homeType" },
             _react2.default.createElement(
               "option",
               { value: "All" },
               "All Homes"
             ),
             this.homeTypes()
-          ),
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "bedrooms" },
           _react2.default.createElement(
             "label",
-            { htmlFor: "rooms" },
+            { htmlFor: "bedrooms" },
             "Bedrooms"
           ),
           _react2.default.createElement(
             "select",
-            {
-              name: "rooms",
-              className: "filters rooms",
-              onChange: this.props.change
-            },
+            { onChange: this.props.change, name: "bedrooms" },
             this.bedrooms()
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "price" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "price" },
+            "Price"
           ),
           _react2.default.createElement(
             "div",
-            { className: "filters price" },
-            _react2.default.createElement(
-              "span",
-              { className: "title" },
-              "Price"
-            ),
+            { className: "row" },
             _react2.default.createElement("input", {
               type: "text",
               name: "min_price",
-              className: "min-price",
               onChange: this.props.change,
               value: this.props.globalState.min_price
             }),
             _react2.default.createElement("input", {
               type: "text",
               name: "max_price",
-              className: "max-price",
               onChange: this.props.change,
               value: this.props.globalState.max_price
             })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "space" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "space" },
+            "Space (m\xB2)"
           ),
           _react2.default.createElement(
             "div",
-            { className: "filters floor-space" },
-            _react2.default.createElement(
-              "span",
-              { className: "title" },
-              "Floor Space"
-            ),
+            { className: "row" },
             _react2.default.createElement("input", {
               type: "text",
-              name: "min_floor_space",
-              className: "min-floor-space",
+              name: "min_space",
               onChange: this.props.change,
-              value: this.props.globalState.min_floor_space
+              value: this.props.globalState.min_space
             }),
             _react2.default.createElement("input", {
               type: "text",
-              name: "max_floor_space",
-              className: "max-floor-space",
+              name: "max_space",
               onChange: this.props.change,
-              value: this.props.globalState.max_floor_space
+              value: this.props.globalState.max_space
+            })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "extras" },
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "elevators" },
+              "Elevators"
+            ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "elevators",
+              onChange: this.props.change,
+              value: "elevators"
             })
           ),
           _react2.default.createElement(
             "div",
-            { className: "filters extras" },
-            _react2.default.createElement(
-              "span",
-              { className: "title" },
-              "Extras"
-            ),
+            { className: "row" },
             _react2.default.createElement(
               "label",
-              { htmlFor: "extras" },
-              _react2.default.createElement(
-                "span",
-                null,
-                "Elevators"
-              ),
-              _react2.default.createElement("input", {
-                name: "elevator",
-                value: "elevator",
-                type: "checkbox",
-                onChange: this.props.change
-              })
+              { htmlFor: "pool" },
+              "Pool"
             ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "pool",
+              onChange: this.props.change,
+              value: "pool"
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
             _react2.default.createElement(
               "label",
-              { htmlFor: "extras" },
-              _react2.default.createElement(
-                "span",
-                null,
-                "Swimming Pool"
-              ),
-              _react2.default.createElement("input", {
-                name: "swimming_pool",
-                value: "swimming_pool",
-                type: "checkbox",
-                onChange: this.props.change
-              })
+              { htmlFor: "gym" },
+              "Gym"
             ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "gym",
+              onChange: this.props.change,
+              value: "gym"
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
             _react2.default.createElement(
               "label",
-              { htmlFor: "extras" },
-              _react2.default.createElement(
-                "span",
-                null,
-                "Finished Basement"
-              ),
-              _react2.default.createElement("input", {
-                name: "finished_basement",
-                value: "finished_basement",
-                type: "checkbox",
-                onChange: this.props.change
-              })
+              { htmlFor: "balcony" },
+              "Balcony"
             ),
-            _react2.default.createElement(
-              "label",
-              { htmlFor: "extras" },
-              _react2.default.createElement(
-                "span",
-                null,
-                "Gym"
-              ),
-              _react2.default.createElement("input", {
-                name: "gym",
-                value: "gym",
-                type: "checkbox",
-                onChange: this.props.change
-              })
-            )
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "balcony",
+              onChange: this.props.change,
+              value: "balcony"
+            })
           )
         )
       );
@@ -640,86 +737,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Header = function (_Component) {
-  _inherits(Header, _Component);
-
-  function Header() {
-    _classCallCheck(this, Header);
-
-    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-  }
-
-  _createClass(Header, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "header",
-        null,
-        _react2.default.createElement(
-          "div",
-          { className: "logo" },
-          "Real Estate"
-        ),
-        _react2.default.createElement(
-          "nav",
-          null,
-          _react2.default.createElement(
-            "a",
-            { href: "#" },
-            "Create Ads"
-          ),
-          _react2.default.createElement(
-            "a",
-            { href: "#" },
-            "About Us"
-          ),
-          _react2.default.createElement(
-            "a",
-            { href: "#" },
-            "Log In"
-          ),
-          _react2.default.createElement(
-            "a",
-            { href: "#", className: "register-btn" },
-            "Register"
-          )
-        )
-      );
-    }
-  }]);
-
-  return Header;
-}(_react.Component);
-
-exports.default = Header;
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -753,206 +771,60 @@ var Listings = function (_Component) {
 
 
       if (listingsData == undefined || listingsData.length == 0) {
-        return 'Sorry your filter did not match any listing.';
+        return 'No results were found.';
       }
 
       return listingsData.map(function (listing, index) {
-        if (_this2.props.globalState.view == 'box') {
-          // box view
+        if (_this2.props.globalState.view == 'gallery') {
+          // gallery view
           return _react2.default.createElement(
             'div',
-            { className: 'col-xs-12 col-sm-6 col-md-4 col-lg-3', key: index },
+            { className: 'col-xs-6 col-sm-4', key: index },
             _react2.default.createElement(
               'div',
-              { className: 'listing' },
+              { className: 'listings-item' },
               _react2.default.createElement(
                 'div',
-                {
-                  className: 'listing-img',
-                  style: {
-                    background: 'url("' + listing.image + '") no-repeat center center'
-                  }
-                },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'address' },
-                  listing.address
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'details' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-3' },
-                    _react2.default.createElement('div', { className: 'user-img' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-9' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'user-details' },
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'user-name' },
-                        'Nina Smith'
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'post-date' },
-                        '05/11/2017'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'listing-details' },
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'floor-space' },
-                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          listing.floorspace,
-                          'm\xB2'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'rooms' },
-                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          listing.rooms,
-                          'rooms'
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'view-btn' },
-                      'View Listing'
-                    )
-                  )
-                )
+                { className: 'listings-img' },
+                _react2.default.createElement('img', { src: listingsData[index].image })
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'bottom-info' },
+                { className: 'listings-caption' },
+                listingsData[index].city,
                 _react2.default.createElement(
                   'span',
-                  { className: 'price' },
+                  null,
                   '$',
-                  listing.price
-                ),
-                _react2.default.createElement(
-                  'span',
-                  { className: 'location' },
-                  _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
-                  listing.city,
-                  ', ',
-                  listing.state
+                  listingsData[index].price,
+                  '/wk'
                 )
               )
             )
           );
         } else {
-          // Long view
+          // list view
           return _react2.default.createElement(
             'div',
-            { className: 'col-lg-6', key: index },
+            { className: 'col-xs-12', key: index },
             _react2.default.createElement(
               'div',
-              { className: 'listing' },
+              { className: 'listings-item' },
               _react2.default.createElement(
                 'div',
-                {
-                  className: 'listing-img',
-                  style: {
-                    background: 'url("' + listing.image + '") no-repeat center center'
-                  }
-                },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'address' },
-                  listing.address
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'details' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-3' },
-                    _react2.default.createElement('div', { className: 'user-img' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-9' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'user-details' },
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'user-name' },
-                        'Nina Smith'
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'post-date' },
-                        '05/11/2017'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'listing-details' },
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'floor-space' },
-                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          listing.floorspace,
-                          'm\xB2'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'rooms' },
-                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          listing.rooms,
-                          'rooms'
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'view-btn' },
-                      'View Listing'
-                    )
-                  )
-                )
+                { className: 'listings-img' },
+                _react2.default.createElement('img', { src: listingsData[index].image })
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'bottom-info' },
+                { className: 'listings-caption' },
+                listingsData[index].city,
                 _react2.default.createElement(
                   'span',
-                  { className: 'price' },
+                  null,
                   '$',
-                  listing.price
-                ),
-                _react2.default.createElement(
-                  'span',
-                  { className: 'location' },
-                  _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
-                  listing.city,
-                  ', ',
-                  listing.state
+                  listingsData[index].price,
+                  '/wk'
                 )
               )
             )
@@ -965,31 +837,32 @@ var Listings = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { id: 'listings' },
+        { className: 'listings' },
         _react2.default.createElement(
-          'section',
-          { className: 'search-area' },
-          _react2.default.createElement('input', { type: 'text', name: 'search', onChange: this.props.change })
-        ),
-        _react2.default.createElement(
-          'section',
-          { className: 'sortby-area' },
+          'div',
+          { className: 'listings-options' },
           _react2.default.createElement(
             'div',
-            { className: 'results' },
-            this.props.globalState.filteredData.length,
-            ' results found'
+            { className: 'search' },
+            _react2.default.createElement('input', {
+              type: 'text',
+              name: 'search',
+              placeholder: 'Where do you want to live?',
+              onChange: this.props.change
+            }),
+            _react2.default.createElement(
+              'p',
+              null,
+              this.props.globalState.filteredData.length,
+              ' results found'
+            )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'sort-options' },
+            { className: 'sortby' },
             _react2.default.createElement(
               'select',
-              {
-                name: 'sortby',
-                className: 'sortby',
-                onChange: this.props.change
-              },
+              { name: 'sortby', onChange: this.props.change },
               _react2.default.createElement(
                 'option',
                 { value: 'price-dsc' },
@@ -1000,76 +873,78 @@ var Listings = function (_Component) {
                 { value: 'price-asc' },
                 'Highest Price'
               )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'views' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'Gallery'
+            ),
+            _react2.default.createElement('i', {
+              className: 'fa fa-th',
+              'aria-hidden': 'true',
+              onClick: this.props.changeView.bind(null, 'gallery')
+            }),
+            _react2.default.createElement(
+              'span',
+              null,
+              'List'
+            ),
+            _react2.default.createElement('i', {
+              className: 'fa fa-list',
+              'aria-hidden': 'true',
+              onClick: this.props.changeView.bind(null, 'list')
+            })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'listings-area' },
+          this.loopListings()
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'paginate col-xs-12' },
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Prev'
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'view' },
-              _react2.default.createElement('i', {
-                className: 'fa fa-th-list',
-                'aria-hidden': 'true',
-                onClick: this.props.changeView.bind(null, 'long')
-              }),
-              _react2.default.createElement('i', {
-                className: 'fa fa-th',
-                'aria-hidden': 'true',
-                onClick: this.props.changeView.bind(null, 'box')
-              })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'section',
-          { className: 'listings-results' },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            this.loopListings()
-          )
-        ),
-        _react2.default.createElement(
-          'section',
-          { id: 'pagination' },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
+              'li',
+              { className: 'active' },
+              '1'
+            ),
             _react2.default.createElement(
-              'ul',
-              { className: 'pages' },
-              _react2.default.createElement(
-                'li',
-                null,
-                'Prev'
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: 'active' },
-                '1'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                '2'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                '3'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                '4'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                '5'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Next'
-              )
+              'li',
+              null,
+              '2'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '3'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '4'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '5'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Next'
             )
           )
         )
@@ -1082,6 +957,177 @@ var Listings = function (_Component) {
 
 exports.default = Listings;
 
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  buyrent: 'buy',
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 490,
+  space: 100,
+  elevators: false,
+  pool: true,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 550,
+  space: 100,
+  elevators: false,
+  pool: true,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 750,
+  space: 100,
+  elevators: false,
+  pool: true,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Parramatta',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 650,
+  space: 100,
+  elevators: false,
+  pool: false,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Parramatta',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 660,
+  space: 100,
+  elevators: true,
+  pool: false,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Parramatta',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 650,
+  space: 100,
+  elevators: true,
+  pool: false,
+  gym: true,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Chatswood',
+  homeType: 'Studio',
+  bedrooms: 0,
+  price: 450,
+  space: 100,
+  elevators: true,
+  pool: false,
+  gym: false,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'buy',
+  agencyowner: 'owner',
+  city: 'Penrith',
+  homeType: 'House',
+  bedrooms: 2,
+  price: 670,
+  space: 100,
+  elevators: true,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'owner',
+  city: 'Chatswood',
+  homeType: 'House',
+  bedrooms: 1,
+  price: 650,
+  space: 100,
+  elevators: true,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'owner',
+  city: 'Penrith',
+  homeType: 'Apartment',
+  bedrooms: 3,
+  price: 550,
+  space: 200,
+  elevators: true,
+  pool: true,
+  gym: false,
+  balcony: true,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'rent',
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 1,
+  price: 650,
+  space: 300,
+  elevators: true,
+  pool: true,
+  gym: true,
+  balcony: true,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}, {
+  buyrent: 'buy',
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 3,
+  price: 640,
+  space: 400,
+  elevators: true,
+  pool: true,
+  gym: true,
+  balcony: true,
+  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+}];
+
+exports.default = listingsData;
+
 /***/ })
 
-},[102]);
+},[101]);

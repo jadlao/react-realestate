@@ -1,0 +1,45 @@
+.header {
+  background: $white;
+  height: 80px;
+  padding: 30px 20px;
+  //border-bottom: 1px solid #333;
+  -webkit-box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
+  -moz-box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
+  box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
+
+  .nav-brand {
+    float: left;
+
+    img {
+      height: 45px;
+      margin-top: -10px;
+    }
+  }
+
+  nav {
+    float: right;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 20px;
+
+      a {
+        text-decoration: none;
+        color: $darkgrey;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-register {
+        padding: 10px;
+        border-radius: 5px;
+        background: $btngrey;
+
+        &:hover {
+          color: $white;
+          background: $blue;
+        }
+      }
+    }
+  }
+}

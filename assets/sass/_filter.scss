@@ -1,0 +1,87 @@
+#content-area {
+  overflow: auto;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.filters {
+  background: $darkgrey;
+  padding: 30px;
+  color: $white;
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 80px;
+  min-width: 300px;
+
+  .btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    background: darken($btngrey, 20%);
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &.active {
+      background: $blue;
+    }
+  }
+
+  .bedrooms,
+  .cities,
+  .homeTypes {
+    margin: 20px 0;
+
+    select {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+      height: 40px;
+      border: 0;
+      border-radius: none;
+      font-size: 1rem;
+      font-weight: 200;
+      color: $white;
+      background: darken($darkergrey, 10%);
+    }
+  }
+
+  .price,
+  .space {
+    margin: 40px 0;
+
+    input {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 15px;
+      width: 40%;
+      font-size: 1rem;
+      padding: 5px;
+      border: 0;
+      font-weight: 200;
+      color: $white;
+      background: darken($darkergrey, 10%);
+    }
+  }
+
+  .extras {
+    margin-top: 40px;
+
+    .row {
+      margin-left: 0;
+      margin-top: 20px;
+
+      input {
+        float: right;
+        font-size: 2rem;
+      }
+    }
+  }
+}
