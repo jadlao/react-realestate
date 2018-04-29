@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
   height: 100%;
+  background: $offwhite;
 }
 
 .filters {
@@ -83,5 +84,12 @@
         font-size: 2rem;
       }
     }
+  }
+}
+
+// tablet
+@media screen and (max-width: 1000px) {
+  .filters {
+    display: none;
   }
 }

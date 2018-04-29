@@ -5,7 +5,7 @@ const VENDOR_LIBS = ['redux', 'react-redux', 'react-dom'];
 
 module.exports = {
   entry: {
-    realEstate: './assets/js/App/App.js',
+    App: './assets/js/App/App.js',
     //regularJS: './assets/js/regularJS.js',
     vendor: VENDOR_LIBS
   },

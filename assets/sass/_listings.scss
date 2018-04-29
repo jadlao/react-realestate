@@ -1,10 +1,11 @@
 .listings {
   background: $offwhite;
   overflow: auto;
-  height: 1000px;
+  height: 100%;
   display: inline-block;
   padding: 20px;
   margin-left: 30%;
+  min-width: 710px;
 
   .listings-options {
     width: 100%;
@@ -43,6 +44,17 @@
       width: 25%;
       vertical-align: top;
       position: relative;
+
+      .fa {
+        cursor: pointer;
+        margin-right: 10px;
+        &.hidden {
+          display: hidden;
+        }
+        &.active {
+          display: block;
+        }
+      }
 
       select {
         height: 20px;
@@ -134,6 +146,39 @@
 
       &.active {
         background: $blue;
+      }
+    }
+  }
+}
+
+// tablet
+@media screen and (max-width: 1000px) {
+  .listings {
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+// mobile
+@media screen and (max-width: 750px) {
+  .listings {
+    .listings-options {
+      margin-bottom: 50px;
+      .search {
+        width: 100%;
+        display: block;
+      }
+      .sortby {
+        width: 50%;
+        display: inline-block;
+
+        select {
+          position: relative;
+        }
+      }
+      .views {
+        display: inline-block;
+        width: 170px;
       }
     }
   }

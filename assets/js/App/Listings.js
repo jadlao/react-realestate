@@ -63,6 +63,14 @@ export default class Listings extends Component {
             <p>{this.props.globalState.filteredData.length} results found</p>
           </div>
           <div className="sortby">
+            <i
+              className={`fa fa-bars ${
+                this.state.mobile ? 'active' : 'hidden'
+              }`}
+              aria-hidden="true"
+              onClick={this.props.openMenu}
+            />
+
             <select name="sortby" onChange={this.props.change}>
               <option value="price-dsc">Lowest Price</option>
               <option value="price-asc">Highest Price</option>

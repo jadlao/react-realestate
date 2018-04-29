@@ -14,6 +14,7 @@ body,
 html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
+  position: relative;
 }
 
 h1 {
@@ -41,18 +42,5 @@ h6 {
 }
 
 .body-wrapper {
-  margin-bottom: -200px;
   position: relative;
-}
-
-footer {
-  height: 200px;
-  background: $purple;
-  color: $white;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: -528px;
-  padding: 40px;
 }

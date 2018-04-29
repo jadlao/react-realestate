@@ -28,7 +28,9 @@ class App extends Component {
       filteredData: listingsData,
       populateData: '',
       sortby: 'price-dsc',
-      search: ''
+      search: '',
+      mobile: '',
+      menu: 'inactive'
     };
     this.changeView = this.changeView.bind(this);
     this.filterData = this.filterData.bind(this);
@@ -36,12 +38,32 @@ class App extends Component {
     this.buyClick = this.buyClick.bind(this);
     this.ownerClick = this.ownerClick.bind(this);
     this.populateForms = this.populateForms.bind(this);
+    this.openMenu = this.openMenu.bind(this);
   }
 
   componentWillMount() {
     var listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price;
     });
+  }
+
+  componentDidMount() {
+    var w = window.innerWidth;
+
+    if (w <= 1000) {
+      this.setState(
+        {
+          mobile: true
+        },
+        () => {
+          console.log(this.state);
+        }
+      );
+    } else {
+      this.setState({
+        mobile: false
+      });
+    }
   }
 
   // change view to list or gallery style
@@ -56,7 +78,8 @@ class App extends Component {
     var value =
       e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
-    this.setState({
+    this.setState(
+      {
         [name]: value
       },
       () => {
@@ -72,7 +95,8 @@ class App extends Component {
     var value = e.target.id;
 
     if (this.state.buy == 'buy' || this.state.rent == 'rent') {
-      this.setState({
+      this.setState(
+        {
           buy: '',
           rent: ''
         },
@@ -81,7 +105,8 @@ class App extends Component {
         }
       );
     } else {
-      this.setState({
+      this.setState(
+        {
           [name]: value
         },
         () => {
@@ -97,7 +122,8 @@ class App extends Component {
     var value = e.target.id;
 
     if (this.state.agency == 'agency' || this.state.owner == 'owner') {
-      this.setState({
+      this.setState(
+        {
           agency: '',
           owner: ''
         },
@@ -106,7 +132,8 @@ class App extends Component {
         }
       );
     } else {
-      this.setState({
+      this.setState(
+        {
           [name]: value
         },
         () => {
@@ -227,7 +254,8 @@ class App extends Component {
       });
     }
 
-    this.setState({
+    this.setState(
+      {
         filteredData: newData
       },
       () => {
@@ -266,7 +294,8 @@ class App extends Component {
     bedrooms = [...bedrooms];
     bedrooms = bedrooms.sort();
 
-    this.setState({
+    this.setState(
+      {
         populateData: {
           cities,
           homeTypes,
@@ -277,6 +306,10 @@ class App extends Component {
         //console.log(this.state);
       }
     );
+  }
+
+  openMenu() {
+    console.log('clicked');
   }
 
   render() {
@@ -314,10 +347,10 @@ class App extends Component {
               globalState={this.state}
               change={this.change}
               changeView={this.changeView}
+              openMenu={this.openMenu}
             />
           </section>
         </div>
-        <footer>2018 Real Estate</footer>
       </div>
     );
   }

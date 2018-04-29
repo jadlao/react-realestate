@@ -43,3 +43,10 @@
     }
   }
 }
+
+// mobile
+@media screen and (max-width: 451px) {
+  .header {
+    font-size: 0.9rem;
+  }
+}
