@@ -47,20 +47,13 @@
 
       .fa {
         cursor: pointer;
-        margin-right: 10px;
-        &.hidden {
-          display: hidden;
-        }
-        &.active {
-          display: block;
-        }
+        display: none;
       }
 
       select {
         height: 20px;
         text-align: right;
         position: absolute;
-        right: 0;
         margin-right: 10px;
       }
     }
@@ -156,6 +149,14 @@
   .listings {
     margin-left: 0;
     min-width: 100%;
+    .listings-options {
+      .sortby {
+        .fa {
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }
 

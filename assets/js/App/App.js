@@ -29,7 +29,6 @@ class App extends Component {
       populateData: '',
       sortby: 'price-dsc',
       search: '',
-      mobile: '',
       menu: 'inactive'
     };
     this.changeView = this.changeView.bind(this);
@@ -45,25 +44,6 @@ class App extends Component {
     var listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price;
     });
-  }
-
-  componentDidMount() {
-    var w = window.innerWidth;
-
-    if (w <= 1000) {
-      this.setState(
-        {
-          mobile: true
-        },
-        () => {
-          console.log(this.state);
-        }
-      );
-    } else {
-      this.setState({
-        mobile: false
-      });
-    }
   }
 
   // change view to list or gallery style
@@ -309,7 +289,25 @@ class App extends Component {
   }
 
   openMenu() {
-    console.log('clicked');
+    if (this.state.menu != 'active') {
+      this.setState(
+        {
+          menu: 'active'
+        },
+        () => {
+          console.log(this.state.menu);
+        }
+      );
+    } else {
+      this.setState(
+        {
+          menu: 'inactive'
+        },
+        () => {
+          console.log(this.state.menu);
+        }
+      );
+    }
   }
 
   render() {

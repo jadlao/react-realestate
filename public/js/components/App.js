@@ -70,7 +70,6 @@ var App = function (_Component) {
       populateData: '',
       sortby: 'price-dsc',
       search: '',
-      mobile: '',
       menu: 'inactive'
     };
     _this.changeView = _this.changeView.bind(_this);
@@ -90,25 +89,6 @@ var App = function (_Component) {
         return a.price - b.price;
       });
     }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      var w = window.innerWidth;
-
-      if (w <= 1000) {
-        this.setState({
-          mobile: true
-        }, function () {
-          console.log(_this2.state);
-        });
-      } else {
-        this.setState({
-          mobile: false
-        });
-      }
-    }
 
     // change view to list or gallery style
 
@@ -122,7 +102,7 @@ var App = function (_Component) {
   }, {
     key: 'change',
     value: function change(e) {
-      var _this3 = this;
+      var _this2 = this;
 
       var name = e.target.name;
       var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -130,13 +110,13 @@ var App = function (_Component) {
       this.setState(_defineProperty({}, name, value), function () {
         //console.log(this.state);
         // call filter data method
-        _this3.filterData();
+        _this2.filterData();
       });
     }
   }, {
     key: 'buyClick',
     value: function buyClick(e) {
-      var _this4 = this;
+      var _this3 = this;
 
       var name = e.target.id;
       var value = e.target.id;
@@ -146,19 +126,19 @@ var App = function (_Component) {
           buy: '',
           rent: ''
         }, function () {
-          _this4.filterData();
+          _this3.filterData();
         });
       } else {
         this.setState(_defineProperty({}, name, value), function () {
           //console.log([name], value);
-          _this4.filterData();
+          _this3.filterData();
         });
       }
     }
   }, {
     key: 'ownerClick',
     value: function ownerClick(e) {
-      var _this5 = this;
+      var _this4 = this;
 
       var name = e.target.id;
       var value = e.target.id;
@@ -168,12 +148,12 @@ var App = function (_Component) {
           agency: '',
           owner: ''
         }, function () {
-          _this5.filterData();
+          _this4.filterData();
         });
       } else {
         this.setState(_defineProperty({}, name, value), function () {
           //console.log([name], value);
-          _this5.filterData();
+          _this4.filterData();
         });
       }
     }
@@ -183,11 +163,11 @@ var App = function (_Component) {
   }, {
     key: 'filterData',
     value: function filterData() {
-      var _this6 = this;
+      var _this5 = this;
 
       // price, space, bedrooms filter
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this6.state.min_price && item.price <= _this6.state.max_price && item.space >= _this6.state.min_space && item.space <= _this6.state.max_space && item.bedrooms >= _this6.state.bedrooms;
+        return item.price >= _this5.state.min_price && item.price <= _this5.state.max_price && item.space >= _this5.state.min_space && item.space <= _this5.state.max_space && item.bedrooms >= _this5.state.bedrooms;
       });
 
       // buy filter
@@ -221,14 +201,14 @@ var App = function (_Component) {
       // city filter
       if (this.state.city != 'All') {
         newData = newData.filter(function (item) {
-          return item.city == _this6.state.city;
+          return item.city == _this5.state.city;
         });
       }
 
       // home type filter
       if (this.state.homeType != 'All') {
         newData = newData.filter(function (item) {
-          return item.homeType == _this6.state.homeType;
+          return item.homeType == _this5.state.homeType;
         });
       }
 
@@ -278,7 +258,7 @@ var App = function (_Component) {
       if (this.state.search != '') {
         newData = newData.filter(function (item) {
           var city = item.city.toLowerCase();
-          var searchText = _this6.state.search.toLowerCase();
+          var searchText = _this5.state.search.toLowerCase();
           var n = city.match(searchText);
 
           if (n != null) {
@@ -290,7 +270,7 @@ var App = function (_Component) {
       this.setState({
         filteredData: newData
       }, function () {
-        console.log(_this6.state);
+        console.log(_this5.state);
       });
     }
 
@@ -340,7 +320,21 @@ var App = function (_Component) {
   }, {
     key: 'openMenu',
     value: function openMenu() {
-      console.log('clicked');
+      var _this6 = this;
+
+      if (this.state.menu != 'active') {
+        this.setState({
+          menu: 'active'
+        }, function () {
+          console.log(_this6.state.menu);
+        });
+      } else {
+        this.setState({
+          menu: 'inactive'
+        }, function () {
+          console.log(_this6.state.menu);
+        });
+      }
     }
   }, {
     key: 'render',
@@ -884,7 +878,7 @@ var Listings = function (_Component) {
             'div',
             { className: 'sortby' },
             _react2.default.createElement('i', {
-              className: 'fa fa-bars ' + (this.state.mobile ? 'active' : 'hidden'),
+              className: 'fa fa-bars',
               'aria-hidden': 'true',
               onClick: this.props.openMenu
             }),

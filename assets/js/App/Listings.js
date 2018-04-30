@@ -64,9 +64,7 @@ export default class Listings extends Component {
           </div>
           <div className="sortby">
             <i
-              className={`fa fa-bars ${
-                this.state.mobile ? 'active' : 'hidden'
-              }`}
+              className="fa fa-bars"
               aria-hidden="true"
               onClick={this.props.openMenu}
             />
