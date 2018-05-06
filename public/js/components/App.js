@@ -51,8 +51,6 @@ var App = function (_Component) {
     _this.state = {
       listingsData: _listingsData2.default,
       view: 'gallery',
-      buy: '',
-      rent: '',
       agency: '',
       owner: '',
       city: 'All',
@@ -75,7 +73,6 @@ var App = function (_Component) {
     _this.changeView = _this.changeView.bind(_this);
     _this.filterData = _this.filterData.bind(_this);
     _this.change = _this.change.bind(_this);
-    _this.buyClick = _this.buyClick.bind(_this);
     _this.ownerClick = _this.ownerClick.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
     _this.openMenu = _this.openMenu.bind(_this);
@@ -114,31 +111,9 @@ var App = function (_Component) {
       });
     }
   }, {
-    key: 'buyClick',
-    value: function buyClick(e) {
-      var _this3 = this;
-
-      var name = e.target.id;
-      var value = e.target.id;
-
-      if (this.state.buy == 'buy' || this.state.rent == 'rent') {
-        this.setState({
-          buy: '',
-          rent: ''
-        }, function () {
-          _this3.filterData();
-        });
-      } else {
-        this.setState(_defineProperty({}, name, value), function () {
-          //console.log([name], value);
-          _this3.filterData();
-        });
-      }
-    }
-  }, {
     key: 'ownerClick',
     value: function ownerClick(e) {
-      var _this4 = this;
+      var _this3 = this;
 
       var name = e.target.id;
       var value = e.target.id;
@@ -148,12 +123,12 @@ var App = function (_Component) {
           agency: '',
           owner: ''
         }, function () {
-          _this4.filterData();
+          _this3.filterData();
         });
       } else {
         this.setState(_defineProperty({}, name, value), function () {
           //console.log([name], value);
-          _this4.filterData();
+          _this3.filterData();
         });
       }
     }
@@ -163,11 +138,11 @@ var App = function (_Component) {
   }, {
     key: 'filterData',
     value: function filterData() {
-      var _this5 = this;
+      var _this4 = this;
 
       // price, space, bedrooms filter
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this5.state.min_price && item.price <= _this5.state.max_price && item.space >= _this5.state.min_space && item.space <= _this5.state.max_space && item.bedrooms >= _this5.state.bedrooms;
+        return item.price >= _this4.state.min_price && item.price <= _this4.state.max_price && item.space >= _this4.state.min_space && item.space <= _this4.state.max_space && item.bedrooms >= _this4.state.bedrooms;
       });
 
       // buy filter
@@ -201,14 +176,14 @@ var App = function (_Component) {
       // city filter
       if (this.state.city != 'All') {
         newData = newData.filter(function (item) {
-          return item.city == _this5.state.city;
+          return item.city == _this4.state.city;
         });
       }
 
       // home type filter
       if (this.state.homeType != 'All') {
         newData = newData.filter(function (item) {
-          return item.homeType == _this5.state.homeType;
+          return item.homeType == _this4.state.homeType;
         });
       }
 
@@ -258,7 +233,7 @@ var App = function (_Component) {
       if (this.state.search != '') {
         newData = newData.filter(function (item) {
           var city = item.city.toLowerCase();
-          var searchText = _this5.state.search.toLowerCase();
+          var searchText = _this4.state.search.toLowerCase();
           var n = city.match(searchText);
 
           if (n != null) {
@@ -270,7 +245,7 @@ var App = function (_Component) {
       this.setState({
         filteredData: newData
       }, function () {
-        console.log(_this5.state);
+        console.log(_this4.state);
       });
     }
 
@@ -320,19 +295,19 @@ var App = function (_Component) {
   }, {
     key: 'openMenu',
     value: function openMenu() {
-      var _this6 = this;
+      var _this5 = this;
 
       if (this.state.menu != 'active') {
         this.setState({
           menu: 'active'
         }, function () {
-          console.log(_this6.state.menu);
+          console.log(_this5.state.menu);
         });
       } else {
         this.setState({
           menu: 'inactive'
         }, function () {
-          console.log(_this6.state.menu);
+          console.log(_this5.state.menu);
         });
       }
     }
@@ -390,7 +365,6 @@ var App = function (_Component) {
             { id: 'content-area' },
             _react2.default.createElement(_Filter2.default, {
               change: this.change,
-              buyClick: this.buyClick,
               ownerClick: this.ownerClick,
               globalState: this.state,
               populateAction: this.populateForms
@@ -520,28 +494,6 @@ var Filter = function (_Component) {
           "h5",
           null,
           "Options"
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "buy-rent" },
-          _react2.default.createElement(
-            "div",
-            {
-              className: "btn " + (this.props.globalState.buy == 'buy' ? 'active' : ''),
-              onClick: this.props.buyClick,
-              id: "buy"
-            },
-            "Buy"
-          ),
-          _react2.default.createElement(
-            "div",
-            {
-              className: "btn " + (this.props.globalState.rent == 'rent' ? 'active' : ''),
-              onClick: this.props.buyClick,
-              id: "rent"
-            },
-            "Rent"
-          )
         ),
         _react2.default.createElement(
           "div",
@@ -993,161 +945,149 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var listingsData = [{
-  buyrent: 'buy',
   agencyowner: 'agency',
   city: 'Sydney CBD',
-  homeType: 'Apartment',
-  bedrooms: 2,
-  price: 490,
-  space: 100,
+  homeType: 'House',
+  bedrooms: 3,
+  price: 850,
+  space: 200,
   elevators: false,
   pool: true,
-  gym: true,
+  gym: false,
   balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  image: 'https://image.ibb.co/dTVGR7/rs_thumb01.png'
 }, {
-  buyrent: 'rent',
-  agencyowner: 'agency',
-  city: 'Sydney CBD',
-  homeType: 'Apartment',
-  bedrooms: 2,
-  price: 550,
-  space: 100,
-  elevators: false,
-  pool: true,
-  gym: true,
-  balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
-}, {
-  buyrent: 'rent',
   agencyowner: 'agency',
   city: 'Sydney CBD',
   homeType: 'Apartment',
   bedrooms: 2,
   price: 750,
   space: 100,
-  elevators: false,
+  elevators: true,
   pool: true,
   gym: true,
-  balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  balcony: true,
+  image: 'https://image.ibb.co/i5jMtn/rs_thumb02.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'agency',
-  city: 'Parramatta',
-  homeType: 'Apartment',
+  city: 'Neutral Bay',
+  homeType: 'House',
   bedrooms: 2,
-  price: 650,
-  space: 100,
+  price: 950,
+  space: 210,
   elevators: false,
-  pool: false,
-  gym: true,
+  pool: true,
+  gym: false,
   balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  image: 'https://image.ibb.co/myai67/rs_thumb03.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'agency',
   city: 'Parramatta',
   homeType: 'Apartment',
-  bedrooms: 2,
-  price: 660,
+  bedrooms: 1,
+  price: 500,
   space: 100,
   elevators: true,
-  pool: false,
-  gym: true,
-  balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  pool: true,
+  gym: false,
+  balcony: true,
+  image: 'https://image.ibb.co/mEnwR7/rs_thumb04.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'agency',
-  city: 'Parramatta',
-  homeType: 'Apartment',
-  bedrooms: 2,
-  price: 650,
-  space: 100,
-  elevators: true,
-  pool: false,
-  gym: true,
-  balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
-}, {
-  buyrent: 'rent',
-  agencyowner: 'agency',
-  city: 'Chatswood',
-  homeType: 'Studio',
-  bedrooms: 0,
+  city: 'Penrith',
+  homeType: 'House',
+  bedrooms: 1,
   price: 450,
   space: 100,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/bxGCzS/rs_thumb05.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Chatswood',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 760,
+  space: 100,
   elevators: true,
+  pool: false,
+  gym: true,
+  balcony: true,
+  image: 'https://image.ibb.co/dunwR7/rs_thumb06.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Randwick',
+  homeType: 'Studio',
+  bedrooms: 0,
+  price: 490,
+  space: 100,
+  elevators: false,
   pool: false,
   gym: false,
   balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  image: 'https://image.ibb.co/gtsKeS/rs_thumb07.png'
 }, {
-  buyrent: 'buy',
   agencyowner: 'owner',
-  city: 'Penrith',
+  city: 'Sydney CBD',
   homeType: 'House',
   bedrooms: 2,
-  price: 670,
-  space: 100,
-  elevators: true,
+  price: 770,
+  space: 300,
+  elevators: false,
   pool: true,
   gym: false,
   balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  image: 'https://image.ibb.co/iTyszS/rs_thumb08.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'owner',
   city: 'Chatswood',
   homeType: 'House',
-  bedrooms: 1,
-  price: 650,
-  space: 100,
-  elevators: true,
+  bedrooms: 3,
+  price: 800,
+  space: 300,
+  elevators: false,
   pool: true,
   gym: false,
   balcony: false,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  image: 'https://image.ibb.co/fHbO67/rs_thumb09.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'owner',
   city: 'Penrith',
-  homeType: 'Apartment',
+  homeType: 'House',
   bedrooms: 3,
-  price: 550,
-  space: 200,
-  elevators: true,
+  price: 670,
+  space: 250,
+  elevators: false,
   pool: true,
   gym: false,
-  balcony: true,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  balcony: false,
+  image: 'https://image.ibb.co/gp1qm7/rs_thumb10.png'
 }, {
-  buyrent: 'rent',
   agencyowner: 'agency',
-  city: 'Sydney CBD',
-  homeType: 'Apartment',
-  bedrooms: 1,
+  city: 'Parramatta',
+  homeType: 'House',
+  bedrooms: 2,
   price: 650,
-  space: 300,
-  elevators: true,
-  pool: true,
-  gym: true,
-  balcony: true,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  space: 230,
+  elevators: false,
+  pool: false,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/c61CzS/rs_thumb11.png'
 }, {
-  buyrent: 'buy',
   agencyowner: 'agency',
   city: 'Sydney CBD',
   homeType: 'Apartment',
   bedrooms: 3,
-  price: 640,
-  space: 400,
-  elevators: true,
+  price: 1050,
+  space: 410,
+  elevators: false,
   pool: true,
-  gym: true,
-  balcony: true,
-  image: 'http://shriyaproperties.com/wp-content/uploads/2014/03/Samruddhi-Apartment-Hubli.jpg'
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/jfKbR7/rs_thumb12.png'
 }];
 
 exports.default = listingsData;

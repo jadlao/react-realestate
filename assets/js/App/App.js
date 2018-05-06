@@ -10,8 +10,6 @@ class App extends Component {
     this.state = {
       listingsData,
       view: 'gallery',
-      buy: '',
-      rent: '',
       agency: '',
       owner: '',
       city: 'All',
@@ -34,7 +32,6 @@ class App extends Component {
     this.changeView = this.changeView.bind(this);
     this.filterData = this.filterData.bind(this);
     this.change = this.change.bind(this);
-    this.buyClick = this.buyClick.bind(this);
     this.ownerClick = this.ownerClick.bind(this);
     this.populateForms = this.populateForms.bind(this);
     this.openMenu = this.openMenu.bind(this);
@@ -68,33 +65,6 @@ class App extends Component {
         this.filterData();
       }
     );
-  }
-
-  buyClick(e) {
-    var name = e.target.id;
-    var value = e.target.id;
-
-    if (this.state.buy == 'buy' || this.state.rent == 'rent') {
-      this.setState(
-        {
-          buy: '',
-          rent: ''
-        },
-        () => {
-          this.filterData();
-        }
-      );
-    } else {
-      this.setState(
-        {
-          [name]: value
-        },
-        () => {
-          //console.log([name], value);
-          this.filterData();
-        }
-      );
-    }
   }
 
   ownerClick(e) {
@@ -335,7 +305,6 @@ class App extends Component {
           <section id="content-area">
             <Filter
               change={this.change}
-              buyClick={this.buyClick}
               ownerClick={this.ownerClick}
               globalState={this.state}
               populateAction={this.populateForms}

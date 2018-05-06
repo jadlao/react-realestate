@@ -58,27 +58,6 @@ export default class Filter extends Component {
       <section className="filters col-xs-4">
         <h5>Options</h5>
 
-        <div className="buy-rent">
-          <div
-            className={`btn ${
-              this.props.globalState.buy == 'buy' ? 'active' : ''
-            }`}
-            onClick={this.props.buyClick}
-            id="buy"
-          >
-            Buy
-          </div>
-          <div
-            className={`btn ${
-              this.props.globalState.rent == 'rent' ? 'active' : ''
-            }`}
-            onClick={this.props.buyClick}
-            id="rent"
-          >
-            Rent
-          </div>
-        </div>
-
         <div className="agency-owner">
           <div
             className={`btn ${
