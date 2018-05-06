@@ -11,7 +11,7 @@ export default class Listings extends Component {
     let { listingsData } = this.props;
 
     if (listingsData == undefined || listingsData.length == 0) {
-      return 'No results were found.';
+      return '';
     }
 
     return listingsData.map((listing, index) => {
@@ -97,8 +97,6 @@ export default class Listings extends Component {
             <li className="active">1</li>
             <li>2</li>
             <li>3</li>
-            <li>4</li>
-            <li>5</li>
             <li>Next</li>
           </ul>
         </div>

@@ -102,25 +102,31 @@ export default class Filter extends Component {
 
         <div className="cities">
           <label htmlFor="city">City</label>
-          <select onChange={this.props.change} name="city">
-            <option value="All">All cities</option>
-            {this.cities()}
-          </select>
+          <div className="select-wrapper">
+            <select onChange={this.props.change} name="city">
+              <option value="All">All cities</option>
+              {this.cities()}
+            </select>
+          </div>
         </div>
 
         <div className="homeTypes">
           <label htmlFor="homeType">Home Type</label>
-          <select onChange={this.props.change} name="homeType">
-            <option value="All">All Homes</option>
-            {this.homeTypes()}
-          </select>
+          <div className="select-wrapper">
+            <select onChange={this.props.change} name="homeType">
+              <option value="All">All Homes</option>
+              {this.homeTypes()}
+            </select>
+          </div>
         </div>
 
         <div className="bedrooms">
           <label htmlFor="bedrooms">Bedrooms</label>
-          <select onChange={this.props.change} name="bedrooms">
-            {this.bedrooms()}
-          </select>
+          <div className="select-wrapper">
+            <select onChange={this.props.change} name="bedrooms">
+              {this.bedrooms()}
+            </select>
+          </div>
         </div>
 
         <div className="price">

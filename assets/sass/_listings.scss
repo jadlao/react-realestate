@@ -1,6 +1,6 @@
 .listings {
   background: $offwhite;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   display: inline-block;
   padding: 20px;
@@ -126,19 +126,28 @@
     width: 100%;
     text-align: center;
     margin-top: 50px;
+    height: 56px;
+    position: relative;
 
-    ul li {
-      display: inline-block;
-      padding: 20px;
-      background: $white;
+    ul {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -145px;
 
-      &:hover {
-        cursor: pointer;
-        background: $blue;
-      }
+      li {
+        display: inline-block;
+        padding: 20px;
+        background: $white;
 
-      &.active {
-        background: $blue;
+        &:hover {
+          cursor: pointer;
+          background: $blue;
+        }
+
+        &.active {
+          background: $blue;
+        }
       }
     }
   }

@@ -574,14 +574,18 @@ var Filter = function (_Component) {
             "City"
           ),
           _react2.default.createElement(
-            "select",
-            { onChange: this.props.change, name: "city" },
+            "div",
+            { className: "select-wrapper" },
             _react2.default.createElement(
-              "option",
-              { value: "All" },
-              "All cities"
-            ),
-            this.cities()
+              "select",
+              { onChange: this.props.change, name: "city" },
+              _react2.default.createElement(
+                "option",
+                { value: "All" },
+                "All cities"
+              ),
+              this.cities()
+            )
           )
         ),
         _react2.default.createElement(
@@ -593,14 +597,18 @@ var Filter = function (_Component) {
             "Home Type"
           ),
           _react2.default.createElement(
-            "select",
-            { onChange: this.props.change, name: "homeType" },
+            "div",
+            { className: "select-wrapper" },
             _react2.default.createElement(
-              "option",
-              { value: "All" },
-              "All Homes"
-            ),
-            this.homeTypes()
+              "select",
+              { onChange: this.props.change, name: "homeType" },
+              _react2.default.createElement(
+                "option",
+                { value: "All" },
+                "All Homes"
+              ),
+              this.homeTypes()
+            )
           )
         ),
         _react2.default.createElement(
@@ -612,9 +620,13 @@ var Filter = function (_Component) {
             "Bedrooms"
           ),
           _react2.default.createElement(
-            "select",
-            { onChange: this.props.change, name: "bedrooms" },
-            this.bedrooms()
+            "div",
+            { className: "select-wrapper" },
+            _react2.default.createElement(
+              "select",
+              { onChange: this.props.change, name: "bedrooms" },
+              this.bedrooms()
+            )
           )
         ),
         _react2.default.createElement(
@@ -788,7 +800,7 @@ var Listings = function (_Component) {
 
 
       if (listingsData == undefined || listingsData.length == 0) {
-        return 'No results were found.';
+        return '';
       }
 
       return listingsData.map(function (listing, index) {
@@ -952,16 +964,6 @@ var Listings = function (_Component) {
               'li',
               null,
               '3'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              '4'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              '5'
             ),
             _react2.default.createElement(
               'li',
