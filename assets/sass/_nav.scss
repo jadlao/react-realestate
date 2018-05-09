@@ -1,43 +1,36 @@
 .header {
   background: $white;
   height: 80px;
-  padding: 30px 20px;
-  //border-bottom: 1px solid #333;
+  padding: 35px 30px; //border-bottom: 1px solid #333;
   -webkit-box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
   -moz-box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
   box-shadow: 0 3px 5px 0 rgba(238, 238, 238, 1);
-
   .nav-brand {
     float: left;
-
-    img {
-      height: 45px;
-      margin-top: -10px;
-    }
+    font-family: 'Lora', serif;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: $gold;
   }
-
   nav {
     float: right;
-
     li {
       list-style: none;
       display: inline-block;
       margin-left: 20px;
-
       a {
         text-decoration: none;
-        color: $darkgrey;
+        color: $blackfont;
         transition: all 0.3s ease-in-out;
       }
-
       .btn-register {
         padding: 10px;
-        border-radius: 5px;
-        background: $btngrey;
-
+        border-radius: 0;
+        color: $white;
+        background: darken($btngrey, 20%);
         &:hover {
           color: $white;
-          background: $blue;
+          background: $gold;
         }
       }
     }

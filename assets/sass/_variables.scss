@@ -6,12 +6,11 @@ $breakpoint-small: 'only screen and (min-width: 451px)';
 $breakpoint-medium: 'only screen and (min-width: 768px)';
 $breakpoint-large: 'only screen and (min-width: 1008px)';
 $breakpoint-xl: 'only screen and (min-width: 1300px)';
-
 // Colors
+$blackfont: #525252;
 $white: #fff;
-$darkgrey: #4f5759;
-$darkergrey: #4b5557;
-$offwhite: #f3f3f3;
-$blue: #0bafda;
-$btngrey: #eee;
-$purple: #222236;
+$offwhite: #f0f0f0;
+$lightgrey: #e3e3e3;
+$darkgrey: lighten(#7c7c7c, 10%);
+$btngrey: lighten(#eee, 5%);
+$gold: #c4a34b;

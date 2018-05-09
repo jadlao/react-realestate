@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import 'reset';
 @import 'variables';
 @import 'grid';
 @import 'nav';
 @import 'filter';
 @import 'listings';
-
 * {
   box-sizing: border-box;
 }
 
 body,
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: $blackfont;
   height: 100%;
   position: relative;
   margin: 0;

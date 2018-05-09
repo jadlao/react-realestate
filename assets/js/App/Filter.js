@@ -56,8 +56,7 @@ export default class Filter extends Component {
   render() {
     return (
       <section className="filters col-xs-4">
-        <h5>Options</h5>
-
+        Filter Options
         <div className="agency-owner">
           <div
             className={`btn ${
@@ -78,7 +77,6 @@ export default class Filter extends Component {
             Owner
           </div>
         </div>
-
         <div className="cities">
           <label htmlFor="city">City</label>
           <div className="select-wrapper">
@@ -88,7 +86,6 @@ export default class Filter extends Component {
             </select>
           </div>
         </div>
-
         <div className="homeTypes">
           <label htmlFor="homeType">Home Type</label>
           <div className="select-wrapper">
@@ -98,7 +95,6 @@ export default class Filter extends Component {
             </select>
           </div>
         </div>
-
         <div className="bedrooms">
           <label htmlFor="bedrooms">Bedrooms</label>
           <div className="select-wrapper">
@@ -107,7 +103,6 @@ export default class Filter extends Component {
             </select>
           </div>
         </div>
-
         <div className="price">
           <label htmlFor="price">Price</label>
           <div className="row">
@@ -125,7 +120,6 @@ export default class Filter extends Component {
             />
           </div>
         </div>
-
         <div className="space">
           <label htmlFor="space">Space (m&#178;)</label>
           <div className="row">
@@ -143,7 +137,6 @@ export default class Filter extends Component {
             />
           </div>
         </div>
-
         <div className="extras">
           <div className="row">
             <label htmlFor="elevators">Elevators</label>

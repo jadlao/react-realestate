@@ -326,7 +326,7 @@ var App = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'nav-brand' },
-              _react2.default.createElement('img', { src: 'https://image.ibb.co/kZLL6b/imageedit_1_9700106251.png' })
+              'LuxRentals'
             ),
             _react2.default.createElement(
               'nav',
@@ -490,11 +490,7 @@ var Filter = function (_Component) {
       return _react2.default.createElement(
         "section",
         { className: "filters col-xs-4" },
-        _react2.default.createElement(
-          "h5",
-          null,
-          "Options"
-        ),
+        "Filter Options",
         _react2.default.createElement(
           "div",
           { className: "agency-owner" },
@@ -767,7 +763,42 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'listings-img' },
-                _react2.default.createElement('img', { src: listingsData[index].image })
+                _react2.default.createElement('img', { src: listingsData[index].image }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'overlay' },
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Agent Smith'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'fa fa-home', 'aria-hidden': 'true' },
+                      '\xA0 ',
+                      listingsData[index].space,
+                      ' m',
+                      _react2.default.createElement(
+                        'sup',
+                        null,
+                        '2'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'fa fa-bed', 'aria-hidden': 'true' },
+                      '\xA0 ',
+                      listingsData[index].bedrooms
+                    )
+                  )
+                )
               ),
               _react2.default.createElement(
                 'div',
@@ -794,7 +825,42 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'listings-img' },
-                _react2.default.createElement('img', { src: listingsData[index].image })
+                _react2.default.createElement('img', { src: listingsData[index].image }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'overlay' },
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Agent Smith'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'fa fa-home', 'aria-hidden': 'true' },
+                      '\xA0 ',
+                      listingsData[index].space,
+                      ' m',
+                      _react2.default.createElement(
+                        'sup',
+                        null,
+                        '2'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                      'i',
+                      { className: 'fa fa-bed', 'aria-hidden': 'true' },
+                      '\xA0 ',
+                      listingsData[index].bedrooms
+                    )
+                  )
+                )
               ),
               _react2.default.createElement(
                 'div',
@@ -847,17 +913,21 @@ var Listings = function (_Component) {
               onClick: this.props.openMenu
             }),
             _react2.default.createElement(
-              'select',
-              { name: 'sortby', onChange: this.props.change },
+              'div',
+              { className: 'select-wrapper' },
               _react2.default.createElement(
-                'option',
-                { value: 'price-dsc' },
-                'Lowest Price'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'price-asc' },
-                'Highest Price'
+                'select',
+                { name: 'sortby', onChange: this.props.change },
+                _react2.default.createElement(
+                  'option',
+                  { value: 'price-dsc' },
+                  'Lowest Price'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'price-asc' },
+                  'Highest Price'
+                )
               )
             )
           ),
@@ -982,10 +1052,10 @@ var listingsData = [{
   image: 'https://image.ibb.co/myai67/rs_thumb03.png'
 }, {
   agencyowner: 'agency',
-  city: 'Parramatta',
+  city: 'Milsons Pt',
   homeType: 'Apartment',
   bedrooms: 1,
-  price: 500,
+  price: 610,
   space: 100,
   elevators: true,
   pool: true,
@@ -994,10 +1064,10 @@ var listingsData = [{
   image: 'https://image.ibb.co/mEnwR7/rs_thumb04.png'
 }, {
   agencyowner: 'agency',
-  city: 'Penrith',
+  city: 'Rhodes',
   homeType: 'House',
   bedrooms: 1,
-  price: 450,
+  price: 550,
   space: 100,
   elevators: false,
   pool: true,
@@ -1054,7 +1124,7 @@ var listingsData = [{
   image: 'https://image.ibb.co/fHbO67/rs_thumb09.png'
 }, {
   agencyowner: 'owner',
-  city: 'Penrith',
+  city: 'Rhodes',
   homeType: 'House',
   bedrooms: 3,
   price: 670,
@@ -1066,7 +1136,7 @@ var listingsData = [{
   image: 'https://image.ibb.co/gp1qm7/rs_thumb10.png'
 }, {
   agencyowner: 'agency',
-  city: 'Parramatta',
+  city: 'Milsons Pt',
   homeType: 'House',
   bedrooms: 2,
   price: 650,

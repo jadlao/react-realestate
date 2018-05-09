@@ -22,6 +22,19 @@ export default class Listings extends Component {
             <div className="listings-item">
               <div className="listings-img">
                 <img src={listingsData[index].image} />
+                <div className="overlay">
+                  <p>Agent Smith</p>
+                  <p>
+                    <i className="fa fa-home" aria-hidden="true">
+                      &nbsp; {listingsData[index].space} m<sup>2</sup>
+                    </i>
+                  </p>
+                  <p>
+                    <i className="fa fa-bed" aria-hidden="true">
+                      &nbsp; {listingsData[index].bedrooms}
+                    </i>
+                  </p>
+                </div>
               </div>
               <div className="listings-caption">
                 {listingsData[index].city}
@@ -37,6 +50,19 @@ export default class Listings extends Component {
             <div className="listings-item">
               <div className="listings-img">
                 <img src={listingsData[index].image} />
+                <div className="overlay">
+                  <p>Agent Smith</p>
+                  <p>
+                    <i className="fa fa-home" aria-hidden="true">
+                      &nbsp; {listingsData[index].space} m<sup>2</sup>
+                    </i>
+                  </p>
+                  <p>
+                    <i className="fa fa-bed" aria-hidden="true">
+                      &nbsp; {listingsData[index].bedrooms}
+                    </i>
+                  </p>
+                </div>
               </div>
               <div className="listings-caption">
                 {listingsData[index].city}
@@ -68,11 +94,12 @@ export default class Listings extends Component {
               aria-hidden="true"
               onClick={this.props.openMenu}
             />
-
-            <select name="sortby" onChange={this.props.change}>
-              <option value="price-dsc">Lowest Price</option>
-              <option value="price-asc">Highest Price</option>
-            </select>
+            <div className="select-wrapper">
+              <select name="sortby" onChange={this.props.change}>
+                <option value="price-dsc">Lowest Price</option>
+                <option value="price-asc">Highest Price</option>
+              </select>
+            </div>
           </div>
           <div className="views">
             <span>Gallery</span>

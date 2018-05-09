@@ -40,10 +40,10 @@ var listingsData = [
   },
   {
     agencyowner: 'agency',
-    city: 'Parramatta',
+    city: 'Milsons Pt',
     homeType: 'Apartment',
     bedrooms: 1,
-    price: 500,
+    price: 610,
     space: 100,
     elevators: true,
     pool: true,
@@ -53,10 +53,10 @@ var listingsData = [
   },
   {
     agencyowner: 'agency',
-    city: 'Penrith',
+    city: 'Rhodes',
     homeType: 'House',
     bedrooms: 1,
-    price: 450,
+    price: 550,
     space: 100,
     elevators: false,
     pool: true,
@@ -118,7 +118,7 @@ var listingsData = [
   },
   {
     agencyowner: 'owner',
-    city: 'Penrith',
+    city: 'Rhodes',
     homeType: 'House',
     bedrooms: 3,
     price: 670,
@@ -131,7 +131,7 @@ var listingsData = [
   },
   {
     agencyowner: 'agency',
-    city: 'Parramatta',
+    city: 'Milsons Pt',
     homeType: 'House',
     bedrooms: 2,
     price: 650,
