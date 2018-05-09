@@ -285,7 +285,9 @@ class App extends Component {
       <div className="wrapper">
         <div className="body-wrapper">
           <header className="header">
-            <div className="nav-brand">LuxRentals</div>
+            <div className="nav-brand">
+              <i className="fas fa-wine-glass" />&nbsp;LuxRentals
+            </div>
             <nav>
               <li>
                 <a href="#">About Us</a>

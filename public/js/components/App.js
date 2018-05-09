@@ -326,7 +326,8 @@ var App = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'nav-brand' },
-              'LuxRentals'
+              _react2.default.createElement('i', { className: 'fas fa-wine-glass' }),
+              '\xA0LuxRentals'
             ),
             _react2.default.createElement(
               'nav',
