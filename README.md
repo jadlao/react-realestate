@@ -1,4 +1,4 @@
-# Real Estate Website
+# LuxRentals
 
 A real estate website built using React.
 
