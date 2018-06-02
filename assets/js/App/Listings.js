@@ -89,11 +89,6 @@ export default class Listings extends Component {
             <p>{this.props.globalState.filteredData.length} results found</p>
           </div>
           <div className="sortby">
-            <i
-              className="fa fa-bars"
-              aria-hidden="true"
-              onClick={this.props.openMenu}
-            />
             <div className="select-wrapper">
               <select name="sortby" onChange={this.props.change}>
                 <option value="price-dsc">Lowest Price</option>
@@ -113,6 +108,11 @@ export default class Listings extends Component {
               className="fa fa-list"
               aria-hidden="true"
               onClick={this.props.changeView.bind(null, 'list')}
+            />
+            <i
+              className="fa fa-bars"
+              aria-hidden="true"
+              onClick={this.props.openMenu}
             />
           </div>
         </div>

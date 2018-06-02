@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Filter from './Filter';
+import MobileFilter from './MobileFilter';
 import Listings from './Listings';
 import listingsData from './data/listingsData';
+import Close from 'svg-react-loader?name=Close!../../../public/img/close.svg';
 
 class App extends Component {
   constructor() {
@@ -35,6 +37,7 @@ class App extends Component {
     this.ownerClick = this.ownerClick.bind(this);
     this.populateForms = this.populateForms.bind(this);
     this.openMenu = this.openMenu.bind(this);
+    this.cancelMenu = this.cancelMenu.bind(this);
   }
 
   componentWillMount() {
@@ -279,11 +282,30 @@ class App extends Component {
       );
     }
   }
+  cancelMenu() {
+    this.setState({
+      menu: 'inactive'
+    });
+  }
 
   render() {
     return (
-      <div className="wrapper">
+      <div
+        className={`wrapper ${
+          this.state.menu === 'active' ? 'menu-active' : ''
+        }`}
+      >
         <div className="body-wrapper">
+          <section id="mobile-menu">
+            <Close className="close" onClick={this.cancelMenu} />
+            <MobileFilter
+              change={this.change}
+              ownerClick={this.ownerClick}
+              globalState={this.state}
+              populateAction={this.populateForms}
+            />
+          </section>
+
           <header className="header">
             <div className="nav-brand">
               <i className="fas fa-wine-glass" />&nbsp;LuxRentals

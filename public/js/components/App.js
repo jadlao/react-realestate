@@ -1,6 +1,185 @@
 webpackJsonp([0],{
 
-/***/ 101:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'House',
+  bedrooms: 3,
+  price: 850,
+  space: 200,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/dTVGR7/rs_thumb01.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 750,
+  space: 100,
+  elevators: true,
+  pool: true,
+  gym: true,
+  balcony: true,
+  image: 'https://image.ibb.co/i5jMtn/rs_thumb02.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Neutral Bay',
+  homeType: 'House',
+  bedrooms: 2,
+  price: 950,
+  space: 210,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/myai67/rs_thumb03.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Milsons Pt',
+  homeType: 'Apartment',
+  bedrooms: 1,
+  price: 610,
+  space: 100,
+  elevators: true,
+  pool: true,
+  gym: false,
+  balcony: true,
+  image: 'https://image.ibb.co/mEnwR7/rs_thumb04.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Rhodes',
+  homeType: 'House',
+  bedrooms: 1,
+  price: 550,
+  space: 100,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/bxGCzS/rs_thumb05.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Chatswood',
+  homeType: 'Apartment',
+  bedrooms: 2,
+  price: 760,
+  space: 100,
+  elevators: true,
+  pool: false,
+  gym: true,
+  balcony: true,
+  image: 'https://image.ibb.co/dunwR7/rs_thumb06.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Randwick',
+  homeType: 'Studio',
+  bedrooms: 0,
+  price: 490,
+  space: 100,
+  elevators: false,
+  pool: false,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/gtsKeS/rs_thumb07.png'
+}, {
+  agencyowner: 'owner',
+  city: 'Sydney CBD',
+  homeType: 'House',
+  bedrooms: 2,
+  price: 770,
+  space: 300,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/iTyszS/rs_thumb08.png'
+}, {
+  agencyowner: 'owner',
+  city: 'Chatswood',
+  homeType: 'House',
+  bedrooms: 3,
+  price: 800,
+  space: 300,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/fHbO67/rs_thumb09.png'
+}, {
+  agencyowner: 'owner',
+  city: 'Rhodes',
+  homeType: 'House',
+  bedrooms: 3,
+  price: 670,
+  space: 250,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/gp1qm7/rs_thumb10.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Milsons Pt',
+  homeType: 'House',
+  bedrooms: 2,
+  price: 650,
+  space: 230,
+  elevators: false,
+  pool: false,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/c61CzS/rs_thumb11.png'
+}, {
+  agencyowner: 'agency',
+  city: 'Sydney CBD',
+  homeType: 'Apartment',
+  bedrooms: 3,
+  price: 1050,
+  space: 410,
+  elevators: false,
+  pool: true,
+  gym: false,
+  balcony: false,
+  image: 'https://image.ibb.co/jfKbR7/rs_thumb12.png'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 102:
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(14);
+
+function Close (props) {
+    return React.createElement("svg",props,[React.createElement("style",{"type":"text/css","key":0},"\n\t.st0{fill:none;stroke:#577D91;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n"),React.createElement("g",{"key":1},[React.createElement("polyline",{"className":"st0","points":"2.2,33.1 17.2,18.1 2.2,3.1 \t","key":0}),React.createElement("polyline",{"className":"st0","points":"32.2,3.1 17.2,18.1 32.2,33.1 \t","key":1})])]);
+}
+
+Close.displayName = "Close";
+
+Close.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 35 35","style":{"enableBackground":"new 0 0 35 35"},"xmlSpace":"preserve"};
+
+module.exports = Close;
+
+Close.default = Close;
+
+
+/***/ }),
+
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8,7 +187,7 @@ webpackJsonp([0],{
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(20);
+var _react = __webpack_require__(14);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -20,13 +199,21 @@ var _Filter = __webpack_require__(97);
 
 var _Filter2 = _interopRequireDefault(_Filter);
 
+var _MobileFilter = __webpack_require__(99);
+
+var _MobileFilter2 = _interopRequireDefault(_MobileFilter);
+
 var _Listings = __webpack_require__(98);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _listingsData = __webpack_require__(99);
+var _listingsData = __webpack_require__(100);
 
 var _listingsData2 = _interopRequireDefault(_listingsData);
+
+var _close = __webpack_require__(102);
+
+var _close2 = _interopRequireDefault(_close);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -76,6 +263,7 @@ var App = function (_Component) {
     _this.ownerClick = _this.ownerClick.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
     _this.openMenu = _this.openMenu.bind(_this);
+    _this.cancelMenu = _this.cancelMenu.bind(_this);
     return _this;
   }
 
@@ -312,14 +500,34 @@ var App = function (_Component) {
       }
     }
   }, {
+    key: 'cancelMenu',
+    value: function cancelMenu() {
+      this.setState({
+        menu: 'inactive'
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'wrapper' },
+        {
+          className: 'wrapper ' + (this.state.menu === 'active' ? 'menu-active' : '')
+        },
         _react2.default.createElement(
           'div',
           { className: 'body-wrapper' },
+          _react2.default.createElement(
+            'section',
+            { id: 'mobile-menu' },
+            _react2.default.createElement(_close2.default, { className: 'close', onClick: this.cancelMenu }),
+            _react2.default.createElement(_MobileFilter2.default, {
+              change: this.change,
+              ownerClick: this.ownerClick,
+              globalState: this.state,
+              populateAction: this.populateForms
+            })
+          ),
           _react2.default.createElement(
             'header',
             { className: 'header' },
@@ -404,7 +612,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(20);
+var _react = __webpack_require__(14);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -715,7 +923,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(20);
+var _react = __webpack_require__(14);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -908,11 +1116,6 @@ var Listings = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'sortby' },
-            _react2.default.createElement('i', {
-              className: 'fa fa-bars',
-              'aria-hidden': 'true',
-              onClick: this.props.openMenu
-            }),
             _react2.default.createElement(
               'div',
               { className: 'select-wrapper' },
@@ -954,6 +1157,11 @@ var Listings = function (_Component) {
               className: 'fa fa-list',
               'aria-hidden': 'true',
               onClick: this.props.changeView.bind(null, 'list')
+            }),
+            _react2.default.createElement('i', {
+              className: 'fa fa-bars',
+              'aria-hidden': 'true',
+              onClick: this.props.openMenu
             })
           )
         ),
@@ -1015,154 +1223,306 @@ exports.default = Listings;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var listingsData = [{
-  agencyowner: 'agency',
-  city: 'Sydney CBD',
-  homeType: 'House',
-  bedrooms: 3,
-  price: 850,
-  space: 200,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/dTVGR7/rs_thumb01.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Sydney CBD',
-  homeType: 'Apartment',
-  bedrooms: 2,
-  price: 750,
-  space: 100,
-  elevators: true,
-  pool: true,
-  gym: true,
-  balcony: true,
-  image: 'https://image.ibb.co/i5jMtn/rs_thumb02.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Neutral Bay',
-  homeType: 'House',
-  bedrooms: 2,
-  price: 950,
-  space: 210,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/myai67/rs_thumb03.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Milsons Pt',
-  homeType: 'Apartment',
-  bedrooms: 1,
-  price: 610,
-  space: 100,
-  elevators: true,
-  pool: true,
-  gym: false,
-  balcony: true,
-  image: 'https://image.ibb.co/mEnwR7/rs_thumb04.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Rhodes',
-  homeType: 'House',
-  bedrooms: 1,
-  price: 550,
-  space: 100,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/bxGCzS/rs_thumb05.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Chatswood',
-  homeType: 'Apartment',
-  bedrooms: 2,
-  price: 760,
-  space: 100,
-  elevators: true,
-  pool: false,
-  gym: true,
-  balcony: true,
-  image: 'https://image.ibb.co/dunwR7/rs_thumb06.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Randwick',
-  homeType: 'Studio',
-  bedrooms: 0,
-  price: 490,
-  space: 100,
-  elevators: false,
-  pool: false,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/gtsKeS/rs_thumb07.png'
-}, {
-  agencyowner: 'owner',
-  city: 'Sydney CBD',
-  homeType: 'House',
-  bedrooms: 2,
-  price: 770,
-  space: 300,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/iTyszS/rs_thumb08.png'
-}, {
-  agencyowner: 'owner',
-  city: 'Chatswood',
-  homeType: 'House',
-  bedrooms: 3,
-  price: 800,
-  space: 300,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/fHbO67/rs_thumb09.png'
-}, {
-  agencyowner: 'owner',
-  city: 'Rhodes',
-  homeType: 'House',
-  bedrooms: 3,
-  price: 670,
-  space: 250,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/gp1qm7/rs_thumb10.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Milsons Pt',
-  homeType: 'House',
-  bedrooms: 2,
-  price: 650,
-  space: 230,
-  elevators: false,
-  pool: false,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/c61CzS/rs_thumb11.png'
-}, {
-  agencyowner: 'agency',
-  city: 'Sydney CBD',
-  homeType: 'Apartment',
-  bedrooms: 3,
-  price: 1050,
-  space: 410,
-  elevators: false,
-  pool: true,
-  gym: false,
-  balcony: false,
-  image: 'https://image.ibb.co/jfKbR7/rs_thumb12.png'
-}];
 
-exports.default = listingsData;
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(14);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Filter = function (_Component) {
+  _inherits(Filter, _Component);
+
+  function Filter() {
+    _classCallCheck(this, Filter);
+
+    var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this));
+
+    _this.state = {};
+    _this.cities = _this.cities.bind(_this);
+    _this.homeTypes = _this.homeTypes.bind(_this);
+    _this.bedrooms = _this.bedrooms.bind(_this);
+    return _this;
+  }
+
+  _createClass(Filter, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      this.props.populateAction();
+    }
+  }, {
+    key: "cities",
+    value: function cities() {
+      if (this.props.globalState.populateData.cities != undefined) {
+        var cities = this.props.globalState.populateData.cities;
+        //console.log(cities);
+
+        return cities.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
+    key: "homeTypes",
+    value: function homeTypes() {
+      if (this.props.globalState.populateData.homeTypes != undefined) {
+        var homeTypes = this.props.globalState.populateData.homeTypes;
+
+
+        return homeTypes.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
+    key: "bedrooms",
+    value: function bedrooms() {
+      if (this.props.globalState.populateData.bedrooms != undefined) {
+        var bedrooms = this.props.globalState.populateData.bedrooms;
+
+
+        return bedrooms.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item,
+            "+ BR"
+          );
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { className: "mobile-filters col-xs-4" },
+        "Filter Options",
+        _react2.default.createElement(
+          "div",
+          { className: "agency-owner" },
+          _react2.default.createElement(
+            "div",
+            {
+              className: "btn " + (this.props.globalState.agency == 'agency' ? 'active' : ''),
+              onClick: this.props.ownerClick,
+              id: "agency"
+            },
+            "Agency"
+          ),
+          _react2.default.createElement(
+            "div",
+            {
+              className: "btn " + (this.props.globalState.owner == 'owner' ? 'active' : ''),
+              onClick: this.props.ownerClick,
+              id: "owner"
+            },
+            "Owner"
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "cities" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "city" },
+            "City"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "select-wrapper" },
+            _react2.default.createElement(
+              "select",
+              { onChange: this.props.change, name: "city" },
+              _react2.default.createElement(
+                "option",
+                { value: "All" },
+                "All cities"
+              ),
+              this.cities()
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "homeTypes" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "homeType" },
+            "Home Type"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "select-wrapper" },
+            _react2.default.createElement(
+              "select",
+              { onChange: this.props.change, name: "homeType" },
+              _react2.default.createElement(
+                "option",
+                { value: "All" },
+                "All Homes"
+              ),
+              this.homeTypes()
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "bedrooms" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "bedrooms" },
+            "Bedrooms"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "select-wrapper" },
+            _react2.default.createElement(
+              "select",
+              { onChange: this.props.change, name: "bedrooms" },
+              this.bedrooms()
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "price" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "price" },
+            "Price"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement("input", {
+              type: "text",
+              name: "min_price",
+              onChange: this.props.change,
+              value: this.props.globalState.min_price
+            }),
+            _react2.default.createElement("input", {
+              type: "text",
+              name: "max_price",
+              onChange: this.props.change,
+              value: this.props.globalState.max_price
+            })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "space" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "space" },
+            "Space (m\xB2)"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement("input", {
+              type: "text",
+              name: "min_space",
+              onChange: this.props.change,
+              value: this.props.globalState.min_space
+            }),
+            _react2.default.createElement("input", {
+              type: "text",
+              name: "max_space",
+              onChange: this.props.change,
+              value: this.props.globalState.max_space
+            })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "extras" },
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "elevators" },
+              "Elevators"
+            ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "elevators",
+              onChange: this.props.change,
+              value: "elevators"
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "pool" },
+              "Pool"
+            ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "pool",
+              onChange: this.props.change,
+              value: "pool"
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "gym" },
+              "Gym"
+            ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "gym",
+              onChange: this.props.change,
+              value: "gym"
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "balcony" },
+              "Balcony"
+            ),
+            _react2.default.createElement("input", {
+              type: "checkbox",
+              name: "balcony",
+              onChange: this.props.change,
+              value: "balcony"
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Filter;
+}(_react.Component);
+
+exports.default = Filter;
 
 /***/ })
 
-},[101]);
+},[103]);

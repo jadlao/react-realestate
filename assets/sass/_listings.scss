@@ -38,13 +38,10 @@
     .sortby {
       display: inline-block;
       padding: 10px;
+      padding-left: 0;
       width: 25%;
       vertical-align: top;
       position: relative;
-      .fa {
-        cursor: pointer;
-        display: none;
-      }
       .select-wrapper {
         position: relative;
         &::after {
@@ -80,6 +77,11 @@
       padding: 10px;
       float: right;
       width: 25%;
+      .fa-bars {
+        cursor: pointer;
+        display: none;
+        margin-left: 10px;
+      }
       i,
       span {
         margin-right: 5px;
@@ -89,7 +91,7 @@
         &:hover {
           cursor: pointer;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           margin-right: 20px;
         }
       }
@@ -186,8 +188,8 @@
     margin-left: 0;
     min-width: 100%;
     .listings-options {
-      .sortby {
-        .fa {
+      .views {
+        .fa-bars {
           display: inline-block;
           margin-right: 10px;
         }
