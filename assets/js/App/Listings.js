@@ -86,7 +86,7 @@ export default class Listings extends Component {
               placeholder="Where do you want to live?"
               onChange={this.props.change}
             />
-            <p>{this.props.globalState.filteredData.length} results found</p>
+            <p>{this.props.globalState.filteredData.length} rentals showing</p>
           </div>
           <div className="sortby">
             <div className="select-wrapper">

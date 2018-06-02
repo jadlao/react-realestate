@@ -105,7 +105,7 @@ export default class Filter extends Component {
         </div>
         <div className="price">
           <label htmlFor="price">Price</label>
-          <div className="row">
+          <div className="inputs">
             <input
               type="text"
               name="min_price"
@@ -122,7 +122,7 @@ export default class Filter extends Component {
         </div>
         <div className="space">
           <label htmlFor="space">Space (m&#178;)</label>
-          <div className="row">
+          <div className="inputs">
             <input
               type="text"
               name="min_space"

@@ -5,6 +5,7 @@ import MobileFilter from './MobileFilter';
 import Listings from './Listings';
 import listingsData from './data/listingsData';
 import Close from 'svg-react-loader?name=Close!../../../public/img/close.svg';
+import Favicon from 'react-favicon';
 
 class App extends Component {
   constructor() {
@@ -295,6 +296,7 @@ class App extends Component {
           this.state.menu === 'active' ? 'menu-active' : ''
         }`}
       >
+        <Favicon url="https://image.ibb.co/ddOuhd/favicon.png" />
         <div className="body-wrapper">
           <section id="mobile-menu">
             <Close className="close" onClick={this.cancelMenu} />

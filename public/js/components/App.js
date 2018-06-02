@@ -159,10 +159,10 @@ exports.default = listingsData;
 
 /***/ }),
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
-var React = __webpack_require__(14);
+var React = __webpack_require__(13);
 
 function Close (props) {
     return React.createElement("svg",props,[React.createElement("style",{"type":"text/css","key":0},"\n\t.st0{fill:none;stroke:#577D91;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n"),React.createElement("g",{"key":1},[React.createElement("polyline",{"className":"st0","points":"2.2,33.1 17.2,18.1 2.2,3.1 \t","key":0}),React.createElement("polyline",{"className":"st0","points":"32.2,3.1 17.2,18.1 32.2,33.1 \t","key":1})])]);
@@ -179,7 +179,7 @@ Close.default = Close;
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ Close.default = Close;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -211,9 +211,13 @@ var _listingsData = __webpack_require__(100);
 
 var _listingsData2 = _interopRequireDefault(_listingsData);
 
-var _close = __webpack_require__(102);
+var _close = __webpack_require__(103);
 
 var _close2 = _interopRequireDefault(_close);
+
+var _reactFavicon = __webpack_require__(101);
+
+var _reactFavicon2 = _interopRequireDefault(_reactFavicon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -514,6 +518,7 @@ var App = function (_Component) {
         {
           className: 'wrapper ' + (this.state.menu === 'active' ? 'menu-active' : '')
         },
+        _react2.default.createElement(_reactFavicon2.default, { url: 'https://image.ibb.co/ddOuhd/favicon.png' }),
         _react2.default.createElement(
           'div',
           { className: 'body-wrapper' },
@@ -612,7 +617,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -796,7 +801,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "div",
-            { className: "row" },
+            { className: "inputs" },
             _react2.default.createElement("input", {
               type: "text",
               name: "min_price",
@@ -821,7 +826,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "div",
-            { className: "row" },
+            { className: "inputs" },
             _react2.default.createElement("input", {
               type: "text",
               name: "min_space",
@@ -923,7 +928,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1110,7 +1115,7 @@ var Listings = function (_Component) {
               'p',
               null,
               this.props.globalState.filteredData.length,
-              ' results found'
+              ' rentals showing'
             )
           ),
           _react2.default.createElement(
@@ -1226,7 +1231,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1410,7 +1415,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "div",
-            { className: "row" },
+            { className: "inputs" },
             _react2.default.createElement("input", {
               type: "text",
               name: "min_price",
@@ -1435,7 +1440,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             "div",
-            { className: "row" },
+            { className: "inputs" },
             _react2.default.createElement("input", {
               type: "text",
               name: "min_space",
@@ -1525,4 +1530,4 @@ exports.default = Filter;
 
 /***/ })
 
-},[103]);
+},[104]);
