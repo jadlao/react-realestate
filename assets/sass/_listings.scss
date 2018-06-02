@@ -12,6 +12,7 @@
     display: inline-block;
     .search {
       padding: 10px;
+      padding-left: 23px;
       display: inline-block;
       width: 50%;
       input {
@@ -42,6 +43,7 @@
       width: 25%;
       vertical-align: top;
       position: relative;
+      margin-top: 20px;
       .select-wrapper {
         position: relative;
         &::after {
@@ -77,10 +79,12 @@
       padding: 10px;
       float: right;
       width: 25%;
+      margin-top: 20px;
       .fa-bars {
         cursor: pointer;
         display: none;
         margin-left: 10px;
+        color: $gold;
       }
       i,
       span {
