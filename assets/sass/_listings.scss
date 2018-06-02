@@ -107,6 +107,7 @@
       margin-top: 20px;
       padding: 10px;
       cursor: pointer;
+      animation: fadeIn 0.7s ease-in-out;
       .listings-img {
         transition: all 0.3s ease-in-out;
         position: relative;
@@ -231,5 +232,41 @@
         }
       }
     }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
