@@ -2,7 +2,7 @@ name: rocky
 version: 0.1.0
 
 authors:
-  - JoeSantosGarcia <>
+  - <>
 dependencies:
   kemal:
     github: kemalcr/kemal
